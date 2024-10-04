@@ -35,7 +35,6 @@
 - [How to integrate Outlook calendars into SharePoint](https://sharepointstuff.com/2024/07/25/how-to-integrate-outlook-calendars-into-sharepoint/)
 - [Add sites to allow list to embed content within SharePoint](https://sharepointstuff.com/2024/02/15/add-sites-to-allow-list-to-embed-content-within-sharepoint/)
 - [How to format email links to SharePoint list items in Power Automate](https://sharepointstuff.com/2024/05/16/format-email-links-power-automate/)
-- 
 
 
 ## SP Guides.com
@@ -58,6 +57,17 @@
 - [6 Various Power BI Matrix Multiple Columns Examples](https://www.spguides.com/power-bi-matrix-multiple-column/)
 - [Power Automate Copy Folder + Power Automate Copy Folder Structure](https://www.spguides.com/power-automate-copy-folders/)
 - [6 Easiest Ways to Use Power Apps ForAll Function](https://www.spguides.com/powerapps-forall-function/)
+- [The specified resource does not exist azure blob storage](https://www.spguides.com/the-specified-resource-does-not-exist-azure-blob-storage/)
+- [Content Type Hub in SharePoint Online](https://www.spguides.com/content-type-hub-in-sharepoint/)
+- [if the option “save a list as template” is missing on the list settings. it is most probably because](https://www.spguides.com/save-list-as-template-missing-sharepoint-online/)
+- [SharePoint Script Editor Web Part](https://www.spguides.com/script-editor-web-part-sharepoint-2016/)
+- [Content Editor Webpart in SharePoint Online](https://www.spguides.com/sharepoint-2013-content-editor-web-part-html/)
+- [How to Compare Two Columns in Different Tables in Power BI?](https://www.spguides.com/power-bi-compares-two-columns-in-different-tables/)
+- [Create a Web Application in SharePoint Server](https://www.spguides.com/create-sharepoint-web-application/)
+- [SharePoint Online App Catalog – Detailed tutorial](https://www.spguides.com/sharepoint-online-app-catalog/)
+- [We couldn’t find the Office 365 group connected to this site Solved](https://www.spguides.com/couldnt-restore-site-sharepoint/)
+- [4 Various Power Apps Mod Function Examples](https://www.spguides.com/powerapps-mod-function/)
+- 
 - 
 
 
@@ -81,7 +91,9 @@
 ---
 
 - [WonderLaura](https://wonderlaura.com/posts/)
+- [MattDevaney - Simplify Flow Settings With A Config File In Power Automate Desktop](https://www.matthewdevaney.com/simplify-flow-settings-with-a-config-file-in-power-automate-desktop/)
 - 
+
 ## Webparts and Github Repos
 
 ---
@@ -92,4 +104,7 @@
 - [PnP List Formatting](https://github.com/pnp/List-Formatting/tree/master/form-samples)
 - [PnP Column Samples](https://pnp.github.io/List-Formatting/columnsamples/)
 - [SP Starter Kit](https://github.com/pnp/sp-starter-kit)
+- [Register an Entra ID Application to use with PnP PowerShell](https://pnp.github.io/powershell/articles/registerapplication.html)
+- [SharePoint site design: PnP PowerShell cmdlets](https://pnp.github.io/powershell/articles/registerapplication.html)
+- [Formula Reference for Canvas Apps](https://learn.microsoft.com/en-us/power-platform/power-fx/formula-reference-canvas-apps)
 - 
