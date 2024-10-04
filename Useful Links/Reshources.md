@@ -11,6 +11,8 @@
 - [Creating Custom Metadata in Learning Pathways](https://emilymancini.com/2021/01/29/creating-custom-metadata-in-learning-pathways/)
 - [Personalization with Audience Targeting](https://emilymancini.com/2021/01/14/personalization-with-audience-targeting/)
 - [Free Image Sources](https://emilymancini.com/2020/12/14/free-image-sources/)
+- [[Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
+- 
 
 
 - [SharePoint List Form Customization: What to use when](https://spdcp.com/2024/02/14/sharepoint-list-form-customization-what-to-use-when/)
@@ -18,9 +20,60 @@
 - [Access Denied Error on Styles Library](https://spdcp.com/2020/03/26/access-denied-error-on-styles-library/)
 - [Site Design for Easy Site Page Management](https://spdcp.com/2020/04/16/site-design-for-easy-site-page-management/)
 - [Deploying Application Customizers with a Site Design](https://spdcp.com/2019/10/24/deploying-application-customizers-with-a-site-design/)
--  
+- [Build your first SharePoint client-side web part (Hello World part 1)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+- [From UI Extensions to SharePoint Framework ListView Command Sets](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins-modernize/from-ui-extensions-to-listview-command-sets)
+- [Site template JSON schema](https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema)
+- [SharePoint site theming: JSON schema](https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-json-schema)
+- [
+- 
 
 
+## SharePoint Stuff Blog
+
+---
+
+- [How to integrate Outlook calendars into SharePoint](https://sharepointstuff.com/2024/07/25/how-to-integrate-outlook-calendars-into-sharepoint/)
+- [Add sites to allow list to embed content within SharePoint](https://sharepointstuff.com/2024/02/15/add-sites-to-allow-list-to-embed-content-within-sharepoint/)
+- [How to format email links to SharePoint list items in Power Automate](https://sharepointstuff.com/2024/05/16/format-email-links-power-automate/)
+- 
+
+
+## SP Guides.com
+
+---
+
+- [Quick Links Web Part in SharePoint Online](https://www.spguides.com/sharepoint-online-quick-links-web-part/)
+- [SharePoint List Items CRUD Operations Using PnP PowerShell](https://www.spguides.com/sharepoint-list-items-crud-operations-using-pnp-powershell/)
+- [Power Apps Left Navigation Component – How to Build](https://www.spguides.com/power-apps-left-navigation-component/)
+- [How to Use Environment Variables in Power Platform?](https://www.spguides.com/environment-variables-in-power-platform/)
+- [How to Create a Header Component in Power Apps? - SharePoint & Microsoft Power Platform Tutorials - SPGuides](https://www.spguides.com/create-a-header-component-in-power-apps/)
+- [SPFx Environment Setup Step By Step Guide - 2024 - SharePoint & Microsoft Power Platform Tutorials - SPGuides](https://www.spguides.com/set-up-development-environment-for-sharepoint-framework/)
+- [12 Useful Power Apps Sort Gallery Examples](https://www.spguides.com/power-apps-sort-gallery/)
+- [Open SharePoint list in Excel + Update SharePoint List from Excel using Power Automate](https://www.spguides.com/open-sharepoint-list-in-excel/)
+- [TypeScript Switch Case Examples](https://www.spguides.com/typescript-switch-case-examples/)
+- [Power Automate Email Body Formatting With Examples](https://www.spguides.com/power-automate-email-body-formatting/)
+- [SharePoint Designer Workflow Examples](https://www.spguides.com/sharepoint-designer-workflow-examples/)
+- [SharePoint List Cascading Dropdown Without Power Apps](https://www.spguides.com/cascading-dropdown-sharepoint-2013-jquery/)
+- [How to Create a File in Power Automate?](https://www.spguides.com/create-a-file-in-power-automate/)
+- [6 Various Power BI Matrix Multiple Columns Examples](https://www.spguides.com/power-bi-matrix-multiple-column/)
+- [Power Automate Copy Folder + Power Automate Copy Folder Structure](https://www.spguides.com/power-automate-copy-folders/)
+- [6 Easiest Ways to Use Power Apps ForAll Function](https://www.spguides.com/powerapps-forall-function/)
+- 
+
+
+
+
+## Reddit
+
+---
+
+- [Reddit 1](https://old.reddit.com/r/sharepoint/comments/144fq6d/pros_and_cons_of_creating_document_libraries_in_a/)
+- [Reddit 2](https://old.reddit.com/r/sharepoint/comments/13osdrr/why_no_calendar_view/)
+- [Reddit 3](https://old.reddit.com/r/sharepoint/comments/144fq6d/pros_and_cons_of_creating_document_libraries_in_a/)
+- [Reddit 4](https://old.reddit.com/r/sharepoint/comments/1dl8nge/json_for_sharepoint_list_view/)
+- [Reddit 5](https://old.reddit.com/r/sharepoint/comments/1asjfz3/json_codes_for_sharepoint/)
+- [UseUse column formatting to customize SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting)
+- 
 
 
 ### Main page of Favorite Blogs
@@ -28,4 +81,15 @@
 ---
 
 - [WonderLaura](https://wonderlaura.com/posts/)
+- 
+## Webparts and Github Repos
+
+---
+
+- [React Calendar](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-calendar)
+- [React Rythym of Business Calendar](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-rhythm-of-business-calendar)
+- [SP Formatter](https://github.com/pnp/sp-formatter?tab=readme-ov-file)
+- [PnP List Formatting](https://github.com/pnp/List-Formatting/tree/master/form-samples)
+- [PnP Column Samples](https://pnp.github.io/List-Formatting/columnsamples/)
+- [SP Starter Kit](https://github.com/pnp/sp-starter-kit)
 - 
