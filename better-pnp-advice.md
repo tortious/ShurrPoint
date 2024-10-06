@@ -5,34 +5,52 @@ Step-by-Step Guide to Register and Configure Your PnP App in Entra ID
 1. Register the Application in Entra ID (Azure AD):
 
 	•	Go to the Azure portal.
+
 	•	Navigate to Azure Active Directory > App registrations > New registration.
+
 	•	Provide the following:
+
 	•	Name: Enter a meaningful name for the application (e.g., “PnP App”).
+
 	•	Supported account types: Choose “Accounts in this organizational directory only” (Single tenant) for most internal apps.
+
 	•	Redirect URI: For now, you can leave this blank if you are using PowerShell or select “Web” and enter https://localhost if you plan to run the app locally.
+
 	•	Click Register.
 
-2. Configure API Permissions:
+
+3. Configure API Permissions:
 
 	•	After registering the app, you’ll be redirected to the app’s overview page.
+
 	•	Navigate to API permissions > Add a permission.
+
 	•	Choose Microsoft Graph or SharePoint as the API.
+
 	•	Select the necessary permissions based on your app’s functionality:
+
 	•	For Graph API: Sites.Read.All, Sites.ReadWrite.All, User.Read.
+
 	•	For SharePoint API: Sites.Manage.All, Sites.FullControl.All.
+
 	•	Click Add permissions.
+
 	•	If you see any permissions requiring admin consent, click Grant admin consent for [your organization].
 
-3. Set Up Client Secrets or Certificates:
+5. Set Up Client Secrets or Certificates:
 
 	•	Navigate to Certificates & secrets.
+
 	•	Under Client secrets, click New client secret.
+
 	•	Provide a description and set an expiration period.
+
 	•	Click Add and copy the Value (you will need this for the PnP app).
 
-4. Update the App to Use the Registered App ID and Secret:
+7. Update the App to Use the Registered App ID and Secret:
 
 	•	In your PnP app or script, use the Application (client) ID and the client secret you generated.
+
 	•	For example, if you are using the PnP PowerShell module, use:
 
 Connect-PnPOnline -Url https://<tenant>.sharepoint.com -ClientId "<Client ID>" -ClientSecret "<Client Secret>"
@@ -42,6 +60,7 @@ Connect-PnPOnline -Url https://<tenant>.sharepoint.com -ClientId "<Client ID>" -
 5. Set Redirect URI and API Permissions (Optional if Using PnP PowerShell):
 
 	•	If your PnP app has a web component, go to Authentication and set the Redirect URIs correctly.
+
 	•	Ensure the “Access tokens” and “ID tokens” checkboxes are selected under Implicit grant and hybrid flows in the Authentication section.
 
 Common Issues and Troubleshooting
@@ -63,4 +82,5 @@ Verification Steps
 Next Steps
 
 a. Would you like detailed instructions on configuring the redirect URI and testing it with different environments?
+
 b. Would you like help with a PowerShell script to automate the registration and permission granting for the app?
