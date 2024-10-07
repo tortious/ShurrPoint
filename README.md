@@ -10,3 +10,9 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 [Exploring the Power Apps Toolbar Control: A Game-Changer for App Creation](https://wonderlaura.com/2024/09/02/powerapps-toolbar-control/)
 
 [Effortlessly create sharepoint dashboard](https://wonderlaura.com/2024/03/10/create-a-sharepoint-dashboard-file-and-media-web-part/)
+
+## Nice Little Toolkit
+
+---
+
+[Script Samples](https://pnp.github.io/script-samples/)  |  [SP Starter Kit](https://github.com/tortious/ShuurPoint-starter-kit)  |  [Samples by Framework](https://pnp.github.io/sp-dev-fx-webparts/)  |  [Teams Samples by Framework](https://pnp.github.io/teams-dev-samples/)  [Custom Learning Office](https://github.com/pnp/custom-learning-office-365)  |  [Library Component Samples](https://github.com/pnp/sp-dev-fx-library-components)  |  [List Formatting](https://pnp.github.io/List-Formatting/)  |  [Office Add-in Samples](https://github.com/OfficeDev/Office-Add-in-samples)  |  [PnP Modern Search V4](https://microsoft-search.github.io/pnp-modern-search/)  |  [PnP Samples](https://pnp.github.io/#samples)  |  
