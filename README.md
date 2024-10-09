@@ -28,3 +28,5 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 3. do not add spaces when naming libraries or sites.
 4. use metadata rather than folders - keep it flat.
 5. **Keep it to 1 type of content per library**
+
+- [Repo buried somehwere](https://github.com/tortious/ShurrPoint/blob/main/Useful%20Links/Reshources.md)
