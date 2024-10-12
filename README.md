@@ -30,3 +30,9 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 5. **Keep it to 1 type of content per library**
 
 - [Repo buried somehwere](https://github.com/tortious/ShurrPoint/blob/main/Useful%20Links/Reshources.md)
+
+### Development Resources
+
+1. [Development Team SharePoint Site](https://www.mrsharepoint.guru/what-is-sharepoint-development/)
+2. [Color Theme Creator](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html)
+3. 
