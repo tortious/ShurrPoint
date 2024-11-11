@@ -35,6 +35,27 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 ### Development Resources
 
+### SharePoint Tips Repo
+
+- [export site owner info](https://github.com/Chunlong101/SharePointTips/tree/master/ExportSiteOwnerInfo)
+- [Obtaining Access Token for SharePoint REST API and Microsoft Graph API with Certificates](https://github.com/Chunlong101/SharePointTips/tree/master/Get%20access%20token%20with%20a%20certificate%20to%20call%20sharepoint%20rest%20api%20and%20graph%20api)
+- [Graph Api Delegated Permissions OAuth Code Flow](https://github.com/Chunlong101/SharePointTips/tree/master/Graph%20Api%20Delegated%20Permissions%20OAuth%20Code%20Flow)
+- [Graph api returns inconsistent results when the quantity of tenant sites is large](https://github.com/Chunlong101/SharePointTips/tree/master/Graph%20api%20returns%20inconsistent%20results%20when%20the%20quantity%20of%20tenant%20sites%20is%20large)
+- [Installing SharePoint PnP PowerShell](https://github.com/Chunlong101/SharePointTips/tree/master/Install%20PnP%20PowerShell)
+- [Web Intermittent Issue Detector](https://github.com/Chunlong101/SharePointTips/tree/master/IntermittentIssueDetector)
+- [Metadata field value mismatch issue while uploading files from source library vs target library](https://github.com/Chunlong101/SharePointTips/tree/master/Metadata%20field%20value%20mismatch%20source%20library%20vs%20target%20library)
+- [在 21V Gallatin 环境中使用 Microsoft Graph API](https://github.com/Chunlong101/SharePointTips/tree/master/Microsoft%20Graph%20Api%20in%2021V%20Gallatin)
+- [MonitorAppFabricMemoryUsage](https://github.com/Chunlong101/SharePointTips/tree/master/MonitorAppFabricMemoryUsage)
+- [Prevent onedrive client from auto update](https://github.com/Chunlong101/SharePointTips/tree/master/Prevent%20onedrive%20client%20from%20auto%20update)
+- [SPCacheCleaner](https://github.com/Chunlong101/SharePointTips/tree/master/SPCacheCleaner)
+- [File and Data Recovery Guide](https://github.com/Chunlong101/SharePointTips/tree/master/SPO%20data%20restore)
+- [Search stuff](https://github.com/Chunlong101/SharePointTips/tree/master/Search)
+- [ADFS Configuration for SharePoint Integration](https://github.com/Chunlong101/SharePointTips/tree/master/SetupAdfs)
+- [How to run task scheduler with a script?](https://github.com/Chunlong101/SharePointTips/tree/master/SetupWindowsTaskScheduler)
+- [SharePointTokenHelper](https://github.com/Chunlong101/SharePointTips/tree/master/SharePointTokenHelper)
+- 
+
+
 1. [Development Team SharePoint Site](https://www.mrsharepoint.guru/what-is-sharepoint-development/)
 2. [Color Theme Creator](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html)
 3. 
