@@ -11,6 +11,8 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 [Effortlessly create sharepoint dashboard](https://wonderlaura.com/2024/03/10/create-a-sharepoint-dashboard-file-and-media-web-part/)
 
+[Dope af Repo](https://github.com/Chunlong101/SharePointTips)
+
 ## Nice Little Toolkit
 
 ---
