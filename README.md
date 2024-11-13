@@ -33,6 +33,22 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 - [Repo buried somehwere](https://github.com/tortious/ShurrPoint/blob/main/Useful%20Links/Reshources.md)
 
+- [Main Docs Hub of Good Repo](https://github.com/coska98/Sharepoint/tree/main/docs) | [picture examples](https://github.com/coska98/Sharepoint/tree/main/images) | [code snippets](https://github.com/coska98/Sharepoint/tree/main/includes/snippets)
+- [governance](https://github.com/pnp/mgdc-spo-governance)
+- [Auto SPSourceBuilder](https://github.com/brianlala/AutoSPSourceBuilder/tree/master)
+- [Sharepoint-Provisioning-JSON-orchestrator](https://github.com/spacebrains/Sharepoint-Provisioning-JSON-orchestrator)
+- [BuildAutomationScripts](https://github.com/S1Lazza/BuildAutomationScripts)
+- [SP Scripts - random](https://github.com/Yeoh-Soo-Leong/SharepointScripts)
+- [SharePoint-Online-Fix-Broken-Workbook-Links-Excel](https://github.com/misterglobal/SharePoint-Online-Fix-Broken-Workbook-Links-Excel)
+- [OneDrive Migration](https://github.com/andersonn-cardoso/Migration-Sharepoint-To-Onedrve)
+- [SPO-User-Permissons_Removal](https://github.com/RubenAQuispe/SPO-User-Permissons_Removal)
+- [SharePoint Policy & Procedure Aggregator](https://github.com/Rokawoo/sharepoint-policy-procedure-aggregator)
+- [Set-DefaultLabelOnSPODocLibrary](https://github.com/dgoldman-msft/Set-DefaultLabelOnSPODocLibrary)
+- [pfzim scripts](https://github.com/tortious/scripts_SharePoint24)
+- 
+
+
+
 ### Development Resources
 
 ### SharePoint Tips Repo
