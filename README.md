@@ -13,6 +13,8 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 [Dope af Repo](https://github.com/Chunlong101/SharePointTips)
 
+[another good repo](https://github.com/Dariuszho/SharePoint)
+
 ## Nice Little Toolkit
 
 ---
