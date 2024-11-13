@@ -15,6 +15,9 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 [another good repo](https://github.com/Dariuszho/SharePoint)
 
+[CMS sharepoint inventory](https://github.com/klamberth27/SharePointInventory/tree/main)
+
+
 ## Nice Little Toolkit
 
 ---
