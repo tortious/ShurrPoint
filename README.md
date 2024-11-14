@@ -90,43 +90,82 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 # Keyboard Shortcuts
 
-Selection & Cursors
-Shortcut 	Action
-Ctrl + A 	Select all text
-Ctrl + D 	Repeatedly press to select all instances of the current word/symbol
-Shift + Up/Down/Left/Right 	Select text
-Ctrl + Shift + Left/Right 	Select text up to the end of the next word/symbol
-Shift + Alt + Left/Right 	Contract/expand the selection up to the start and end of the next code block
-Ctrl + L 	Select entire line
-Alt + C 	Toggle selection criteria to be case sensitive/insensitive
-Alt + R 	Toggle selection criteria to include/exclude regex
-Alt + W 	Toggle selection criteria to select whole/partial word matches
-Ctrl + Shift + L 	Select all instances of current word/symbol
-Ctrl + Left/Right 	Move to next word/symbol
-Ctrl + Up/Down 	Scroll the window
-Ctrl + Alt + Up/Down 	Create cursors to type on multiple lines at the same position at the same time - this is huge! Since there's no command to comment/uncomment a block of selected text, use this to quickly add a cursor to the start of each line and then type // to bulk comment a paragraph of code.
-Ctrl + U 	Repeatedly press to 'unwind' the previously made cursor movements and selections
-Tab,Shift + Tab 	Indent or unindent selected lines
-Editing
-Shortcut 	Action
-Alt + Up/Down 	Move currently selected line Up/Down
-Shift + Alt + Up/Down 	Duplicate the current line above/below the current line
-Ctrl + C 	Copy
-Ctrl + F 	Find
-Ctrl + G 	Navigate to line
-Ctrl + H 	Replace
-Ctrl + I 	Open autocomplete dialog
-Ctrl + Shift + K 	Remove selected line
-Ctrl + S 	Save
-Ctrl + V 	Paste
-Ctrl + X 	Cut
-Ctrl + Y 	Redo
-Ctrl + Shift + Z 	Redo
-Ctrl + Z 	Undo
-Other useful shortcuts
-Shortcut 	Action
-Alt + S 	Quick save
-Alt + P 	Save as
-Ctrl + Shift + S 	Save as
-Ctrl + Shift + P 	Publish
-Ctrl + Shift + F 	Search for object/control
+##Selection & Cursors
+
+### Shortcut 	|  Action
+
+    Ctrl + A 	Select all text
+    
+    Ctrl + D 	Repeatedly press to select all instances of the current word/symbol
+
+    Shift + Up/Down/Left/Right 	Select text
+
+    Ctrl + Shift + Left/Right 	Select text up to the end of the next word/symbol
+
+    Shift + Alt + Left/Right 	Contract/expand the selection up to the start and end of the next code block
+
+    Ctrl + L 	Select entire line
+
+    Alt + C 	Toggle selection criteria to be case sensitive/insensitive
+ 
+    Alt + R 	Toggle selection criteria to include/exclude regex
+
+    Alt + W 	Toggle selection criteria to select whole/partial word matches
+
+    Ctrl + Shift + L 	Select all instances of current word/symbol
+
+    Ctrl + Left/Right 	Move to next word/symbol
+
+    Ctrl + Up/Down 	Scroll the window
+
+    Ctrl + Alt + Up/Down 	Create cursors to type on multiple lines at the same position at the same time - this is huge! Since there's no command to comment/uncomment a block of selected text, use this to quickly add a cursor to the start of each line and then type // to bulk comment a paragraph of code.
+
+    Ctrl + U 	Repeatedly press to 'unwind' the previously made cursor movements and selections
+
+    Tab,Shift + Tab 	Indent or unindent selected lines
+
+## Editing
+
+###Shortcut  |  Action
+
+    Alt + Up/Down 	Move currently selected line Up/Down
+
+    Shift + Alt + Up/Down 	Duplicate the current line above/below the current line
+
+    Ctrl + C 	Copy
+
+    Ctrl + F 	Find
+
+    Ctrl + G 	Navigate to line
+
+    Ctrl + H 	Replace
+
+    Ctrl + I 	Open autocomplete dialog
+
+    Ctrl + Shift + K 	Remove selected line
+
+    Ctrl + S 	Save
+
+    Ctrl + V 	Paste
+
+    Ctrl + X 	Cut
+
+    Ctrl + Y 	Redo
+
+    Ctrl + Shift + Z 	Redo
+
+    Ctrl + Z 	Undo
+
+## Other useful shortcuts
+
+### Shortcut  |  Action
+
+    Alt + S 	Quick save
+
+    Alt + P 	Save as
+
+    Ctrl + Shift + S 	Save as
+
+    Ctrl + Shift + P 	Publish
+
+    Ctrl + Shift + F 	Search for object/control
