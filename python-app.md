@@ -4,26 +4,26 @@ Here’s a general approach using the Microsoft Graph API and the requests libra
 
 Steps to create a new SharePoint site with a site design:
 
-	1.	Register an Azure AD App:
-	•	Go to the Azure portal and register a new app with the required permissions (such as Sites.Manage.All for creating new sites).
-	•	Generate a client ID and client secret for authentication.
-	2.	Obtain an OAuth token:
-	•	Use the registered app credentials to get an OAuth token. This token is needed to authenticate your API calls to Microsoft Graph.
-	3.	Create a Communication Site or Team Site using Microsoft Graph API:
-	•	Use the Microsoft Graph API endpoint to create a new site.
-	•	Provide the relevant siteDesignId to apply a specific site design during site creation.
-	4.	Apply site scripts:
-	•	Once the site is created, you can apply additional site scripts using the SharePoint REST API or continue using the Graph API for further customization.
+## 1.	Register an Azure AD App:
+•	Go to the Azure portal and register a new app with the required permissions (such as Sites.Manage.All for creating new sites).
+•	Generate a client ID and client secret for authentication.
+## 2.	Obtain an OAuth token:
+•	Use the registered app credentials to get an OAuth token. This token is needed to authenticate your API calls to Microsoft Graph.
+## 3.	Create a Communication Site or Team Site using Microsoft Graph API:
+•	Use the Microsoft Graph API endpoint to create a new site.
+•	Provide the relevant siteDesignId to apply a specific site design during site creation.
+## 4.	Apply site scripts:
+•	Once the site is created, you can apply additional site scripts using the SharePoint REST API or continue using the Graph API for further customization.
 
 Pseudocode Outline:
 
-	1.	Register an app in Azure AD and gather credentials.
-	2.	Use requests to get an OAuth token.
-	3.	Create a SharePoint site with a POST request to the Graph API.
-	4.	Pass the siteDesignId and additional parameters in the request.
+1.	Register an app in Azure AD and gather credentials.
+2.	Use requests to get an OAuth token.
+3.	Create a SharePoint site with a POST request to the Graph API.
+4.	Pass the siteDesignId and additional parameters in the request.
 
-Example Code:
-
+### Example Code:
+```
 import requests
 from requests.auth import HTTPBasicAuth
 
@@ -65,4 +65,8 @@ def create_sharepoint_site(access_token):
     }
     
     response = requests.post(url, json=site_data, headers=headers)
-    if response.status_code == 
+    if response.status_code ==
+
+```
+
+jajhj
