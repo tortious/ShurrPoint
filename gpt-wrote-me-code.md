@@ -33,14 +33,14 @@ The site design JSON references one or more site scripts. Here’s a basic outli
     }
   ]
 }
-
+```
 
 # Site Script JSON Files
 
 ## 1. General Setup & Branding (site-script-1.json)
 
 This site script will set the theme, logo and basic navigation links. 
-
+```
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
   "actions": [
@@ -68,11 +68,11 @@ This site script will set the theme, logo and basic navigation links.
     }
   ]
 }
-
+```
 ## 2. Document Libraries and Metadata (site-script-2.json)
 
 This site script will create a Document Library with custom metadata fields, useful for tracking case-specific details.
-
+```
 {
   "actions": [
     {
@@ -114,12 +114,12 @@ This site script will create a Document Library with custom metadata fields, use
   ]
 }
 
-
+```
 
 ## 3. Standard Web Parts (site-script-3.json)
 
 This script includes standard web parts, like a document library view and calendar.
-
+```
 {
   "actions": [
     {
@@ -143,11 +143,11 @@ This script includes standard web parts, like a document library view and calend
 
 
 
-
+```
 ## Additional Customization with PowerShell (Optional)
 
 Since SharePoint’s JSON scripting has limitations, use PnP PowerShell for more complex configurations like permissions. Here’s a sample PowerShell script for setting permissions:
-
+```
 # Connect to SharePoint
 Connect-PnPOnline -Url "https://yourcompany.sharepoint.com/sites/YourSite" -UseWebLogin
 
@@ -159,7 +159,7 @@ Add-PnPGroupMember -LoginName "Jane@yourcompany.com" -Group "Visitors"
 # Example: Adding custom permissions to a document library
 Set-PnPListPermission -List "Case Documents" -Group "Mark" -AddRole "Contribute"
 
-
+```
 ## Additional Notes
 
 ### Themes: You’ll need to define the theme in the SharePoint admin center and refer to it in the JSON.
