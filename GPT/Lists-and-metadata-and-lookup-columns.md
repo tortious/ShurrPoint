@@ -63,23 +63,33 @@ ChatGPT
 SharePoint Online doesn’t natively support cross-site Lookups, but there are a few effective workarounds that can help you achieve similar functionality:
 
 1. Use Power Automate to Sync Lists Across Sites
+   
 Set up a Power Automate flow to synchronize data from the Client list on the other site to a list on your current site.
+
 The flow could be triggered whenever a new client is added or modified in the original Client list. This syncs the updated data to the Client list on your current site, essentially creating a local copy of the data.
 Then, use this local list for the Lookup column in your Document Set.
-Example Flow Setup:
+
+**Example Flow Setup:**
 
 Trigger: When an item is created or modified in the Client list on the other site.
 Action: Create or update the corresponding item in the local Client list on your current site.
+
 2. Use Managed Metadata Columns with Term Store
+   
 Instead of a Lookup column, consider using a Managed Metadata column connected to the Term Store for shared data. The Term Store is centrally managed, allowing terms to be reused across sites.
+
 You can structure terms in the Term Store to represent clients, projects, or any other shared data.
 With a Managed Metadata column in your Document Set, users can select from the same centralized terms without needing a direct list connection.
-3. Embed an External List Using the Embed Web Part
+
+4. Embed an External List Using the Embed Web Part
 Although not directly solving the Lookup column limitation, you can embed the original Client list as a view-only web part within the Document Set page. This provides access to the data without needing to duplicate it.
 Users can view the external list but won’t be able to directly select items from it as a column choice. However, it still offers easy access to reference information.
-4. Custom SharePoint Framework (SPFx) Solutions
+
+5. Custom SharePoint Framework (SPFx) Solutions
+   
 For more advanced users, you could create a custom solution using the SharePoint Framework (SPFx). An SPFx web part or field customizer can pull data from another site and display it as a selection option, mimicking the Lookup column behavior.
 This approach requires development skills and permissions to deploy custom code to your SharePoint environment.
-5. Manually Update a Local List Periodically
+
+7. Manually Update a Local List Periodically
 If the client list data doesn’t change frequently, you could create a local version on the current site and update it manually or periodically (e.g., monthly). This allows you to use a local version for Lookups without syncing.
 Using Power Automate to keep a local copy updated is generally the most straightforward and low-code approach. It allows you to handle dynamic data without the limitations of cross-site Lookups.
