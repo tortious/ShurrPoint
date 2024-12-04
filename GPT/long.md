@@ -1,10 +1,10 @@
-Comprehensive Guide to SharePoint Document Sets
+# Comprehensive Guide to SharePoint Document Sets
 
-Introduction to SharePoint Document Sets
+## Introduction to SharePoint Document Sets
 
-Document Sets in SharePoint are a specialized type of folder that enables users to manage multiple related documents as a single entity. Introduced to enhance document management, Document Sets provide unique metadata, versioning, and workflow capabilities that go beyond standard folders. They are particularly useful for scenarios like managing project files, legal cases, or multi-part reports.
+## Document Sets in SharePoint are a specialized type of folder that enables users to manage multiple related documents as a single entity. Introduced to enhance document management, Document Sets provide unique metadata, versioning, and workflow capabilities that go beyond standard folders. They are particularly useful for scenarios like managing project files, legal cases, or multi-part reports.
 
-Key Features of Document Sets
+### Key Features of Document Sets
 
 1.	Centralized Metadata:
    
@@ -34,7 +34,7 @@ Key Features of Document Sets
      
 	•	Permissions can be managed at the Document Set level, controlling access for specific users or groups.
 
-# When to Use Document Sets
+### When to Use Document Sets
 
 •	Legal and Compliance:
 	•	Group related legal documents, such as contracts, pleadings, and filings, into one managed set.
@@ -48,7 +48,7 @@ Key Features of Document Sets
 •	Employee Onboarding:
 	•	Centralize documents like training materials, forms, and guides for each new hire.
 
-How to Set Up and Use Document Sets
+### How to Set Up and Use Document Sets
 
 1. Enable the Feature
 
@@ -81,7 +81,7 @@ How to Set Up and Use Document Sets
 	•	Name the Document Set, and default documents will be created automatically.
 	•	Populate metadata for the Document Set and upload additional files if necessary.
 
-Advantages of Document Sets
+### Advantages of Document Sets
 
 1.	Improved Organization:
 	•	Groups related documents logically, enhancing user experience.
@@ -95,7 +95,7 @@ Advantages of Document Sets
 7.	Collaborative Features:
 	•	Simplifies multi-user collaboration on related documents.
 
-Limitations of Document Sets
+### Limitations of Document Sets
 
 1.	Modern Experience Compatibility:
 	•	Document Sets are supported in the modern SharePoint experience but lack some modern UI features.
@@ -104,18 +104,21 @@ Limitations of Document Sets
 3.	Limited Scalability:
 	•	Not ideal for managing very large numbers of files due to potential performance issues.
 
-Best Practices
+### Best Practices
 
 1.	Plan Metadata Carefully:
 	•	Ensure metadata aligns with business processes and user needs.
-2.	Use Default Templates:
+
+3.	Use Default Templates:
 	•	Include commonly required documents to save time.
-3.	Test and Train:
+
+5.	Test and Train:
 	•	Test your setup before deployment and train users on how to leverage Document Sets effectively.
-4.	Monitor Usage:
+
+7.	Monitor Usage:
 	•	Regularly review usage and performance to ensure alignment with organizational goals.
 
-Accuracy of Information
+## Accuracy of Information
 
 Accuracy: 99%
 This guide is based on documented features of SharePoint Document Sets as of 2024. Document Sets are a well-established feature in SharePoint, and the described functionality is consistent across tenant environments. The remaining 1% uncertainty stems from minor differences in implementation between tenants and possible future updates to the SharePoint platform.
