@@ -6,36 +6,46 @@ Document Sets in SharePoint are a specialized type of folder that enables users 
 
 Key Features of Document Sets
 
-	1.	Centralized Metadata:
+1.	Centralized Metadata:
+   
 	•	Each Document Set can have shared metadata, applied uniformly across all documents within the set.
 	•	Allows categorization and easy searching of related files.
-	2.	Custom Content Types:
+3.	Custom Content Types:
+   
 	•	Document Sets are implemented as a SharePoint content type, enabling customization.
 	•	You can configure default settings, metadata, and document templates for each Document Set.
-	3.	Versioning:
+3.	Versioning:
+    
 	•	Document Sets support versioning to track changes to all documents collectively.
 	•	Users can roll back to a previous version if needed.
-	4.	Workflows and Automation:
+5.	Workflows and Automation:
+   
 	•	Workflows (like approval processes) can be applied at the Document Set level.
 	•	Integration with Power Automate allows advanced automation.
-	5.	Default Documents:
+6.	Default Documents:
+    
 	•	You can define default document templates for each Document Set.
 	•	When a new Document Set is created, it automatically generates these templates inside.
-	6.	Custom Views:
+7.	Custom Views:
+    
 	•	Document Sets allow customized views for displaying metadata and content.
 	•	These views can be tailored for specific use cases or user roles.
-	7.	Permissions:
+8.	Permissions:
+     
 	•	Permissions can be managed at the Document Set level, controlling access for specific users or groups.
 
-When to Use Document Sets
+# When to Use Document Sets
 
-	•	Legal and Compliance:
+•	Legal and Compliance:
 	•	Group related legal documents, such as contracts, pleadings, and filings, into one managed set.
-	•	Project Management:
+ 
+•	Project Management:
 	•	Store and manage all documents related to a single project, such as timelines, reports, and deliverables.
-	•	Marketing Campaigns:
+ 
+•	Marketing Campaigns:
 	•	Organize campaign assets like images, videos, and presentations.
-	•	Employee Onboarding:
+ 
+•	Employee Onboarding:
 	•	Centralize documents like training materials, forms, and guides for each new hire.
 
 How to Set Up and Use Document Sets
@@ -73,33 +83,36 @@ How to Set Up and Use Document Sets
 
 Advantages of Document Sets
 
-	1.	Improved Organization:
+1.	Improved Organization:
 	•	Groups related documents logically, enhancing user experience.
-	2.	Unified Metadata:
+
+3.	Unified Metadata:
 	•	Ensures consistency and improves searchability.
-	3.	Process Efficiency:
+
+5.	Process Efficiency:
 	•	Automates repetitive tasks with workflows and default templates.
-	4.	Collaborative Features:
+
+7.	Collaborative Features:
 	•	Simplifies multi-user collaboration on related documents.
 
 Limitations of Document Sets
 
-	1.	Modern Experience Compatibility:
+1.	Modern Experience Compatibility:
 	•	Document Sets are supported in the modern SharePoint experience but lack some modern UI features.
-	2.	Complexity:
+2.	Complexity:
 	•	May be overkill for simple document storage scenarios.
-	3.	Limited Scalability:
+3.	Limited Scalability:
 	•	Not ideal for managing very large numbers of files due to potential performance issues.
 
 Best Practices
 
-	1.	Plan Metadata Carefully:
+1.	Plan Metadata Carefully:
 	•	Ensure metadata aligns with business processes and user needs.
-	2.	Use Default Templates:
+2.	Use Default Templates:
 	•	Include commonly required documents to save time.
-	3.	Test and Train:
+3.	Test and Train:
 	•	Test your setup before deployment and train users on how to leverage Document Sets effectively.
-	4.	Monitor Usage:
+4.	Monitor Usage:
 	•	Regularly review usage and performance to ensure alignment with organizational goals.
 
 Accuracy of Information
