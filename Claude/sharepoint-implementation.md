@@ -4,6 +4,7 @@
 Connect-PnPOnline -Url "https://yourtenant.sharepoint.com/sites/YourSite" -Interactive
 
 # Create site script JSON
+```
 $siteScript = @{
     "$schema" = "schema.json";
     "actions" = @(
@@ -17,7 +18,9 @@ $siteScript = @{
             "timeZone" = 20 # Central Time
             "locale" = 1033 # US English
         }
-        # Create CLARK list
+```
+ # Create CLARK list
+
         @{
             "verb" = "createSPList"
             "listName" = "CLARK"
@@ -38,7 +41,7 @@ $siteScript = @{
                 # Add other fields as per your requirements
             )
         }
-        # Create Casefiles document library
+# Create Casefiles document library
         @{
             "verb" = "createSPList"
             "listName" = "Casefiles"
@@ -51,7 +54,8 @@ $siteScript = @{
                 # Add fields similar to CLARK list
             )
         }
-        # Add navigation
+# Add navigation
+```
         @{
             "verb" = "addNavLink"
             "url" = "/sites/CaseMgmt"
@@ -61,19 +65,20 @@ $siteScript = @{
         # Additional navigation items...
     )
 }
+```
 
 # Convert to JSON and save
-$siteScript | ConvertTo-Json -Depth 10 | Out-File "SiteScript.json"
+    $siteScript | ConvertTo-Json -Depth 10 | Out-File "SiteScript.json"
 
 # Add site script to tenant
-$script = Add-PnPSiteScript -Title "Legal Case Management" -Description "Template for legal case sites" -Content (Get-Content "SiteScript.json" -Raw)
+    $script = Add-PnPSiteScript -Title "Legal Case Management" -Description "Template for legal case sites" -Content (Get-Content "SiteScript.json" -Raw)
 
 # Create site design
-Add-PnPSiteDesign -Title "Legal Case Site" -Description "Creates a legal case management site" -SiteScriptIds $script.Id -WebTemplate "64" # 64 is team site template
+    Add-PnPSiteDesign -Title "Legal Case Site" -Description "Creates a legal case management site" -SiteScriptIds $script.Id -WebTemplate "64" # 64 is team site template
 
 # 2. SPFx Button Implementation
 # Create new SPFx solution
-yo @microsoft/sharepoint
+    yo @microsoft/sharepoint
 
 # Add React component for button
 # Component code will be in separate file
@@ -88,6 +93,7 @@ yo @microsoft/sharepoint
 # 4. Initialize default content
 
 # Create flow using Power Automate Desktop or cloud flow
+```
 $flowDefinition = @{
     "name" = "Create Case Site"
     "trigger" = @{
