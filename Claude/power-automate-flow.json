@@ -1,0 +1,64 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "triggers": {
+            "When_a_new_item_is_created": {
+                "type": "SharePointTrigger",
+                "inputs": {
+                    "list": "JEFF",
+                    "site": {
+                        "url": "https://yourtenant.sharepoint.com/sites/CaseManagement"
+                    }
+                }
+            }
+        },
+        "actions": {
+            "Create_new_site": {
+                "type": "Http",
+                "inputs": {
+                    "method": "POST",
+                    "uri": "@{concat(triggerBody()?['SPSiteUrl'], '/_api/SPSiteManager/create')}",
+                    "headers": {
+                        "Accept": "application/json;odata=verbose",
+                        "Content-Type": "application/json;odata=verbose"
+                    },
+                    "body": {
+                        "request": {
+                            "Title": "@{triggerBody()?['Title']}",
+                            "Url": "@{concat('sites/case-', triggerBody()?['CaseNumber'])}",
+                            "WebTemplate": "64",
+                            "SiteDesignId": "your-site-design-id"
+                        }
+                    }
+                }
+            },
+            "Update_JEFF_list": {
+                "type": "SharePointUpdateItem",
+                "inputs": {
+                    "list": "JEFF",
+                    "id": "@{triggerBody()?['ID']}",
+                    "item": {
+                        "SiteUrl": "@{body('Create_new_site')?['d']?['Url']}"
+                    }
+                }
+            },
+            "Associate_with_hub": {
+                "type": "Http",
+                "inputs": {
+                    "method": "POST",
+                    "uri": "@{concat(body('Create_new_site')?['d']?['Url'], '/_api/web/HubSiteId')}",
+                    "headers": {
+                        "Accept": "application/json;odata=verbose",
+                        "Content-Type": "application/json;odata=verbose"
+                    },
+                    "body": {
+                        "__metadata": {
+                            "type": "SP.Web"
+                        },
+                        "HubSiteId": "your-hub-site-id"
+                    }
+                }
+            }
+        }
+    }
+}
