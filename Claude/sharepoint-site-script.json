@@ -1,0 +1,295 @@
+{
+    "$schema": "schema.json",
+    "version": 1,
+    "actions": [
+        {
+            "verb": "joinHubSite",
+            "hubSiteId": "{replace-with-your-hub-site-id}"
+        },
+        {
+            "verb": "applyTheme",
+            "themeName": "Company Theme"
+        },
+        {
+            // CLARK List Creation
+            "verb": "createSPList",
+            "listName": "CLARK",
+            "templateType": 100,
+            "subactions": [
+                {
+                    "verb": "addContentType",
+                    "name": "Item"
+                },
+                {
+                    // Managed Metadata Fields
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "CaseName",
+                    "internalName": "CaseName",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "CaseNumber",
+                    "internalName": "CaseNumber",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "ClaimNumber",
+                    "internalName": "ClaimNumber",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Note",
+                    "displayName": "Caption",
+                    "internalName": "Caption",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Lookup",
+                    "displayName": "Adjuster",
+                    "internalName": "Adjuster",
+                    "isRequired": false,
+                    "listId": "{adjuster-list-id}",
+                    "showField": "Title"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Note",
+                    "displayName": "Facts",
+                    "internalName": "Facts",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Lookup",
+                    "displayName": "OpposingCounsel",
+                    "internalName": "OpposingCounsel",
+                    "isRequired": false,
+                    "listId": "{counsel-contacts-list-id}",
+                    "showField": "Title"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "URL",
+                    "displayName": "URL",
+                    "internalName": "URL",
+                    "isRequired": false
+                },
+                // Single line text fields
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "Date Opened",
+                    "internalName": "DateOpened",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "AccidentLocation",
+                    "internalName": "AccidentLocation",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CaseType",
+                    "internalName": "CaseType",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "Damages",
+                    "internalName": "Damages",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "Jurisdiction",
+                    "internalName": "Jurisdiction",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "ClientCompany",
+                    "internalName": "ClientCompany",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CC_ContactPerson",
+                    "internalName": "CC_ContactPerson",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CC_Address",
+                    "internalName": "CC_Address",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CC_Phone",
+                    "internalName": "CC_Phone",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CC_Email",
+                    "internalName": "CC_Email",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "ClientParty",
+                    "internalName": "ClientParty",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CP_Address",
+                    "internalName": "CP_Address",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CP_DOB",
+                    "internalName": "CP_DOB",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CP_Social",
+                    "internalName": "CP_Social",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CP_DriversLicense",
+                    "internalName": "CP_DriversLicense",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "CP_PolicyNumber",
+                    "internalName": "CP_PolicyNumber",
+                    "isRequired": false
+                }
+            ]
+        },
+        {
+            // PleadingsCook Document Library
+            "verb": "createSPList",
+            "listName": "PleadingsCook",
+            "templateType": 101,
+            "subactions": [
+                {
+                    "verb": "addContentType",
+                    "name": "Document Set",
+                    "id": "0x0120D520"
+                },
+                // Adding the same fields as required for the document set
+                {
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "CaseName",
+                    "internalName": "CaseName",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "CaseNumber",
+                    "internalName": "CaseNumber",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "TaxonomyFieldType",
+                    "displayName": "ClaimNumber",
+                    "internalName": "ClaimNumber",
+                    "isRequired": true,
+                    "id": "{generate-new-guid}"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Note",
+                    "displayName": "Caption",
+                    "internalName": "Caption",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Lookup",
+                    "displayName": "Adjuster",
+                    "internalName": "Adjuster",
+                    "isRequired": false,
+                    "listId": "{adjuster-list-id}",
+                    "showField": "Title"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Note",
+                    "displayName": "Facts",
+                    "internalName": "Facts",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Lookup",
+                    "displayName": "OpposingCounsel",
+                    "internalName": "OpposingCounsel",
+                    "isRequired": false,
+                    "listId": "{counsel-contacts-list-id}",
+                    "showField": "Title"
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "URL",
+                    "displayName": "URL",
+                    "internalName": "URL",
+                    "isRequired": false
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Choice",
+                    "displayName": "Efiled",
+                    "internalName": "Efiled",
+                    "isRequired": false,
+                    "choices": ["Yes", "No"]
+                },
+                {
+                    "verb": "addSPField",
+                    "fieldType": "Text",
+                    "displayName": "eFile Date",
+                    "internalName": "eFileDate",
+                    "isRequired": false
+                }
+            ]
+        }
+    ]
+}

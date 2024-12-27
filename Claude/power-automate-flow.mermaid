@@ -1,0 +1,18 @@
+flowchart TD
+    A[Monitor Inbox] --> B{Check Subject}
+    B -->|Contains 'new assignment'| C[Extract Metadata]
+    B -->|Contains 'invoice'| D[Forward to Terry]
+    
+    C --> E[Parse Email Body]
+    E --> F{Case Site Exists?}
+    F -->|Yes| G[Move to Case Library]
+    F -->|No| H[Create New Case Site]
+    H --> I[Apply Template]
+    I --> J[Set Permissions]
+    J --> G
+    
+    G --> K[Update Case List]
+    K --> L[Notify Team]
+    
+    D --> M[Move to Invoice Folder]
+    M --> N[Update Billing List]
