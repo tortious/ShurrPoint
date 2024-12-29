@@ -3,6 +3,7 @@
 # Connect to SharePoint Online
 Connect-PnPOnline -Url "https://yourtenant.sharepoint.com/sites/YourSite" -Interactive
 
+```
 # Create site script JSON
 $siteScript = @{
     "$schema" = "schema.json";
@@ -61,19 +62,19 @@ $siteScript = @{
         # Additional navigation items...
     )
 }
-
+```
 # Convert to JSON and save
-$siteScript | ConvertTo-Json -Depth 10 | Out-File "SiteScript.json"
+    $siteScript | ConvertTo-Json -Depth 10 | Out-File "SiteScript.json"
 
 # Add site script to tenant
-$script = Add-PnPSiteScript -Title "Legal Case Management" -Description "Template for legal case sites" -Content (Get-Content "SiteScript.json" -Raw)
+    $script = Add-PnPSiteScript -Title "Legal Case Management" -Description "Template for legal case sites" -Content (Get-Content "SiteScript.json" -Raw)
 
 # Create site design
-Add-PnPSiteDesign -Title "Legal Case Site" -Description "Creates a legal case management site" -SiteScriptIds $script.Id -WebTemplate "64" # 64 is team site template
+    Add-PnPSiteDesign -Title "Legal Case Site" -Description "Creates a legal case management site" -SiteScriptIds $script.Id -WebTemplate "64" # 64 is team site template
 
 # 2. SPFx Button Implementation
-# Create new SPFx solution
-yo @microsoft/sharepoint
+    # Create new SPFx solution
+    yo @microsoft/sharepoint
 
 # Add React component for button
 # Component code will be in separate file
@@ -82,12 +83,13 @@ yo @microsoft/sharepoint
 # Power Automate flow for site creation
 # Trigger: When a new item is created in JEFF list
 # Actions:
-# 1. Create new site using site design
-# 2. Update JEFF list with new site URL
-# 3. Associate with Case Management hub
-# 4. Initialize default content
+    # 1. Create new site using site design
+    # 2. Update JEFF list with new site URL
+    # 3. Associate with Case Management hub
+    # 4. Initialize default content
 
 # Create flow using Power Automate Desktop or cloud flow
+```
 $flowDefinition = @{
     "name" = "Create Case Site"
     "trigger" = @{
