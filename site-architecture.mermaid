@@ -1,0 +1,27 @@
+graph TD
+    A[Main Hub Site] --> B[Case Management Hub]
+    A --> C[Administrative Hub]
+    A --> D[Technology Hub]
+    A --> E[Knowledge Base Hub]
+    A --> F[Client Portal Hub]
+    
+    B --> G[Case Sites]
+    G --> H[Document Libraries]
+    H --> I[Assignment Files]
+    H --> J[Court Documents]
+    H --> K[Correspondence]
+    H --> L[Evidence]
+    
+    G --> M[Case Lists]
+    M --> N[Timeline]
+    M --> O[Contacts]
+    M --> P[Tasks]
+    
+    F --> Q[Adjuster Portal Sites]
+    Q --> R[Limited Access Libraries]
+    
+    classDef restricted fill:#ff9999
+    classDef secured fill:#99ff99
+    
+    class D,R restricted
+    class H,Q secured
