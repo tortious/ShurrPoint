@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharePointImplementation>
+    <SourceDocuments>
+        <Document>
+            <Name>custom-connectors.md</Name>
+            <Type>Technical Documentation</Type>
+            <Description>SharePoint Custom Connector Integration Guide including REST API, SOAP Service configurations</Description>
+        </Document>
+        <Document>
+            <Name>pnp-custom-template.md</Name>
+            <Type>Technical Documentation</Type>
+            <Description>Comprehensive guide for creating PnP site templates</Description>
+        </Document>
+        <Document>
+            <Name>sharepoint-flows.md</Name>
+            <Type>Technical Documentation</Type>
+            <Description>Essential SharePoint Power Automate Flows Guide</Description>
+        </Document>
+        <Document>
+            <Name>spfx-guide.md</Name>
+            <Type>Technical Documentation</Type>
+            <Description>SPFx WebPart Development Guide</Description>
+        </Document>
+        <Document>
+            <Name>power-automate-flow.json</Name>
+            <Type>Configuration</Type>
+            <Description>Sample Power Automate flow configuration</Description>
+        </Document>
+        <Document>
+            <Name>spfx-button.tsx</Name>
+            <Type>Component</Type>
+            <Description>Sample SPFx button implementation</Description>
+        </Document>
+    </SourceDocuments>
+
+    <ImplementationGuides>
+        <Guide>
+            <Title>Azure/Entra ID App Registration Guide</Title>
+            <Sections>
+                <Section>
+                    <Name>Prerequisites</Name>
+                    <Items>
+                        <Item>Global Administrator or Application Administrator role</Item>
+                        <Item>Azure Portal access</Item>
+                        <Item>Understanding of required permissions</Item>
+                    </Items>
+                </Section>
+                <Section>
+                    <Name>Registration Process</Name>
+                    <Steps>
+                        <Step>Navigate to App Registrations</Step>
+                        <Step>Create New Registration</Step>
+                        <Step>Configure Authentication</Step>
+                        <Step>Set Up API Permissions</Step>
+                        <Step>Create Client Secrets</Step>
+                        <Step>Configure Token Configuration</Step>
+                    </Steps>
+                </Section>
+                <Section>
+                    <Name>Security Best Practices</Name>
+                    <Items>
+                        <Item>Secret Management</Item>
+                        <Item>Certificate Usage</Item>
+                        <Item>Permission Management</Item>
+                    </Items>
+                </Section>
+            </Sections>
+        </Guide>
+        
+        <Guide>
+            <Title>Case Management Dashboard Implementation Guide</Title>
+            <Sections>
+                <Section>
+                    <Name>Core Components</Name>
+                    <Items>
+                        <Item>Case List</Item>
+                        <Item>Document Library</Item>
+                        <Item>Task List</Item>
+                        <Item>KPI Dashboard</Item>
+                        <Item>Automated Workflows</Item>
+                        <Item>Custom Views</Item>
+                    </Items>
+                </Section>
+                <Section>
+                    <Name>Implementation Steps</Name>
+                    <Steps>
+                        <Step>Site Setup</Step>
+                        <Step>List Creation and Configuration</Step>
+                        <Step>Dashboard Creation</Step>
+                        <Step>Automated Workflows</Step>
+                        <Step>Views and Filtering</Step>
+                        <Step>Security Configuration</Step>
+                    </Steps>
+                </Section>
+                <Section>
+                    <Name>Extended Components</Name>
+                    <Items>
+                        <Item>Power Automate Flow Templates</Item>
+                        <Item>SPFx Web Parts</Item>
+                        <Item>Case Analytics</Item>
+                        <Item>Troubleshooting Guide</Item>
+                    </Items>
+                </Section>
+            </Sections>
+        </Guide>
+    </ImplementationGuides>
+
+    <CodeExamples>
+        <Example>
+            <Type>PowerShell</Type>
+            <Purpose>Site Creation</Purpose>
+            <Code>
+                Connect-PnPOnline -Url "https://yourtenant.sharepoint.com"
+                New-PnPSite -Title "Case Management" -Url "/sites/casemanagement" -Template "TeamSite" -Owner "admin@yourtenant.com"
+            </Code>
+        </Example>
+        <Example>
+            <Type>TypeScript</Type>
+            <Purpose>SPFx Web Part</Purpose>
+            <Code>Referenced in spfx-button.tsx</Code>
+        </Example>
+        <Example>
+            <Type>JSON</Type>
+            <Purpose>Power Automate Flow</Purpose>
+            <Code>Referenced in power-automate-flow.json</Code>
+        </Example>
+    </CodeExamples>
+
+    <BestPractices>
+        <Category name="Security">
+            <Practice>Implement proper secret management</Practice>
+            <Practice>Use certificate-based authentication</Practice>
+            <Practice>Regular security audits</Practice>
+            <Practice>Implement least privilege access</Practice>
+        </Category>
+        <Category name="Performance">
+            <Practice>Index key columns</Practice>
+            <Practice>Implement caching strategies</Practice>
+            <Practice>Monitor list thresholds</Practice>
+            <Practice>Optimize queries</Practice>
+        </Category>
+        <Category name="Maintenance">
+            <Practice>Regular backup procedures</Practice>
+            <Practice>Monitor list sizes</Practice>
+            <Practice>Review permissions regularly</Practice>
+            <Practice>Document all customizations</Practice>
+        </Category>
+    </BestPractices>
+</SharePointImplementation>

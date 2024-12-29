@@ -1,0 +1,107 @@
+# Connect to SharePoint Online
+Connect-PnPOnline -Url "https://yourtenant.sharepoint.com/sites/YourSite" -Interactive
+
+# Function to create term sets for managed metadata
+function Create-TermSet {
+    param (
+        [string]$TermSetName,
+        [string]$GroupName
+    )
+    
+    $termGroup = Get-PnPTermGroup -Identity $GroupName
+    if (-not $termGroup) {
+        $termGroup = New-PnPTermGroup -Name $GroupName
+    }
+    
+    $termSet = Get-PnPTermSet -Identity $TermSetName -TermGroup $GroupName
+    if (-not $termSet) {
+        $termSet = New-PnPTermSet -Name $TermSetName -TermGroup $GroupName -Lcid 1033
+    }
+    
+    return $termSet
+}
+
+# Create managed metadata fields
+$caseNameTermSet = Create-TermSet -TermSetName "CaseNames" -GroupName "LegalTerms"
+$caseNumberTermSet = Create-TermSet -TermSetName "CaseNumbers" -GroupName "LegalTerms"
+$claimNumberTermSet = Create-TermSet -TermSetName "ClaimNumbers" -GroupName "LegalTerms"
+
+# Create CLARK list
+$listFields = @(
+    @{Name="CaseName"; Type="TaxonomyField"; TermSetId=$caseNameTermSet.Id},
+    @{Name="CaseNumber"; Type="TaxonomyField"; TermSetId=$caseNumberTermSet.Id},
+    @{Name="ClaimNumber"; Type="TaxonomyField"; TermSetId=$claimNumberTermSet.Id},
+    @{Name="Caption"; Type="Note"; RichText=$true},
+    @{Name="Adjuster"; Type="Lookup"; LookupListId="Adjuster"},
+    @{Name="Facts"; Type="Note"; RichText=$true},
+    @{Name="OpposingCounsel"; Type="Lookup"; LookupListId="Counsel Contacts"},
+    @{Name="URL"; Type="URL"},
+    @{Name="DateOpened"; Type="Text"},
+    @{Name="AccidentLocation"; Type="Text"},
+    @{Name="CaseType"; Type="Text"},
+    @{Name="Damages"; Type="Text"},
+    @{Name="Jurisdiction"; Type="Text"},
+    @{Name="ClientCompany"; Type="Text"},
+    @{Name="CC_ContactPerson"; Type="Text"},
+    @{Name="CC_Address"; Type="Text"},
+    @{Name="CC_Phone"; Type="Text"},
+    @{Name="CC_Email"; Type="Text"},
+    @{Name="ClientParty"; Type="Text"},
+    @{Name="CP_Address"; Type="Text"},
+    @{Name="CP_DOB"; Type="Text"},
+    @{Name="CP_Social"; Type="Text"},
+    @{Name="CP_DriversLicense"; Type="Text"},
+    @{Name="CP_PolicyNumber"; Type="Text"}
+)
+
+# Create the CLARK list
+$list = New-PnPList -Title "CLARK" -Template GenericList -OnQuickLaunch
+
+# Add fields to the list
+foreach ($field in $listFields) {
+    Add-PnPField -List "CLARK" @field
+}
+
+# Create PleadingsCook document library with Document Set
+$library = New-PnPList -Title "PleadingsCook" -Template DocumentLibrary -OnQuickLaunch
+
+# Create Document Set content type
+$docSetCT = Add-PnPContentType -Name "PleadingsDocSet" -ContentTypeId "0x0120D520"
+
+# Add fields to Document Set
+$docSetFields = @(
+    @{Name="CaseName"; Type="TaxonomyField"; TermSetId=$caseNameTermSet.Id},
+    @{Name="CaseNumber"; Type="TaxonomyField"; TermSetId=$caseNumberTermSet.Id},
+    @{Name="ClaimNumber"; Type="TaxonomyField"; TermSetId=$claimNumberTermSet.Id},
+    @{Name="Caption"; Type="Note"; RichText=$true},
+    @{Name="Adjuster"; Type="Lookup"; LookupListId="Adjuster"},
+    @{Name="Facts"; Type="Note"; RichText=$true},
+    @{Name="OpposingCounsel"; Type="Lookup"; LookupListId="Counsel Contacts"},
+    @{Name="URL"; Type="URL"},
+    @{Name="eFiled"; Type="Choice"; Choices=@("Yes","No")},
+    @{Name="DateeFiled"; Type="Text"}
+)
+
+foreach ($field in $docSetFields) {
+    Add-PnPFieldToContentType -ContentType $docSetCT -Field $field
+}
+
+# Add Document Set to library
+Add-PnPContentTypeToList -List "PleadingsCook" -ContentType $docSetCT
+
+# Associate with Hub Site
+$hubSiteUrl = "https://yourtenant.sharepoint.com/sites/CaseManagementHub"
+Add-PnPHubSiteAssociation -Site $siteUrl -HubSite $hubSiteUrl
+
+# Apply branding
+$theme = @{
+    "themePrimary" = "#0078d4"
+    "themeLighterAlt" = "#eff6fc"
+    # Add more theme colors as needed
+}
+
+Add-PnPTenantTheme -Name "OrganizationTheme" -Palette $theme
+Set-PnPWebTheme -Theme "OrganizationTheme"
+
+# Set site logo
+Set-PnPSite -LogoFilePath "path/to/your/logo.png"

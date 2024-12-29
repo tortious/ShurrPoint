@@ -1,0 +1,76 @@
+# SharePoint Docker Development Environment Setup
+# Run this script as Administrator
+
+# 1. Verify Docker installation and permissions
+docker --version
+docker ps
+
+# 2. Set up SharePoint PnP Development Container
+$tenantUrl = "https://yourtenant.sharepoint.com" # Replace with your tenant URL
+$containerName = "sp-dev-environment"
+
+# Create development directory
+New-Item -ItemType Directory -Path "C:\SPDevEnv" -Force
+Set-Location -Path "C:\SPDevEnv"
+
+# Create Dockerfile
+@"
+FROM mcr.microsoft.com/powershell:latest
+
+# Install necessary tools
+RUN pwsh -Command {
+    Install-Module -Name PnP.PowerShell -Force -AllowClobber
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force -AllowClobber
+}
+
+# Set working directory
+WORKDIR /workspace
+
+# Keep container running
+CMD ["pwsh"]
+"@ | Out-File -FilePath "Dockerfile" -Encoding UTF8
+
+# Create VS Code workspace settings
+$vsCodeSettings = @{
+    "docker.host" = "npipe:////.//pipe//docker_engine"
+    "docker.containers.defaultView" = "list"
+    "docker.containers.sortBy" = "CreatedTime"
+    "files.autoSave" = "afterDelay"
+    "files.autoSaveDelay" = 1000
+}
+
+# Create .vscode directory and settings.json
+New-Item -ItemType Directory -Path ".vscode" -Force
+$vsCodeSettings | ConvertTo-Json | Out-File -FilePath ".vscode\settings.json" -Encoding UTF8
+
+# Build and run the container
+docker build -t spdev .
+docker run -d --name $containerName -v ${PWD}:/workspace spdev
+
+# Create connection script
+@"
+# Connect to SharePoint Online
+Connect-PnPOnline -Url "$tenantUrl" -Interactive
+
+# Verify connection
+Get-PnPWeb
+"@ | Out-File -FilePath "connect-sharepoint.ps1" -Encoding UTF8
+
+Write-Host "Development environment setup complete!"
+Write-Host "Next steps:"
+Write-Host "1. Open VS Code and connect to the container"
+Write-Host "2. Run connect-sharepoint.ps1 to authenticate"
+Write-Host "3. Start developing with Docker + SharePoint!"
+
+# Optional: Create common development tasks
+@"
+version: '3'
+services:
+  spdev:
+    build: .
+    volumes:
+      - .:/workspace
+    environment:
+      - ACCEPT_EULA=Y
+    command: pwsh
+"@ | Out-File -FilePath "docker-compose.yml" -Encoding UTF8
