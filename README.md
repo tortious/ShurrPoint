@@ -19,6 +19,8 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 
 [FUCK YEAH - this dude is my hero](https://github.com/SethCFJ/SharePoint-Provisioning)
 
+[1](https://github.com/PowershellScripts/PowerAutomate/tree/main/Get/Get%20FlowsPolicy%20using%20REST%20API)
+
 
 ## Nice Little Toolkit
 
