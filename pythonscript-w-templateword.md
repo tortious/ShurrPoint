@@ -64,22 +64,34 @@ def main():
 
 if __name__ == "__main__":
     main()
-How It Works:
-Prompt for Input:
-```
-The script prompts the user to enter details like Court Number, Case Name, Plaintiff, Defendant, etc.
-Fill Placeholders:
 
-The script replaces the placeholder text (e.g., [Placeholder], [Jurisdiction Placeholder]) in the Word template with the user-provided values.
-Save Output:
+```
+# How It Works:
+
+## Prompt for Input:
+
+The script prompts the user to enter details like Court Number, Case Name, Plaintiff, Defendant, etc.
+
+## Fill Placeholders:
+
+The script replaces the placeholder text ```(e.g., [Placeholder]```, ```[Jurisdiction Placeholder])``` in the Word template with the user-provided values.
+
+## Save Output:
 
 The script saves the updated document as a new file.
-How to Use:
-Save the script to a Python file, e.g., fill_template.py.
-Ensure the template file (Case_Template_Stylized.docx) is in the same directory as the script.
-Run the script:
-bash
-Copy code
-python fill_template.py
-Follow the prompts to enter case details.
-The script generates a new Word document (Filled_Case_Document.docx) with the provided details.
+
+---
+
+# How to Use:
+
+1. Save the script to a Python file, ```(e.g., fill_template.py.)```
+
+2. Ensure the template file ```(Case_Template_Stylized.docx)``` is in the same directory as the script.
+
+## Run the script:
+
+```python fill_template.py```
+
+3. Follow the prompts to enter case details.
+
+4. The script generates a new Word document ```(Filled_Case_Document.docx)``` with the provided details.
