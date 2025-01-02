@@ -8,6 +8,7 @@ Copy code
 from docx import Document
 
 # Define a function to prompt user for input
+```
 def get_case_data():
     data = {}
     print("Enter case details:")
@@ -65,7 +66,7 @@ if __name__ == "__main__":
     main()
 How It Works:
 Prompt for Input:
-
+```
 The script prompts the user to enter details like Court Number, Case Name, Plaintiff, Defendant, etc.
 Fill Placeholders:
 
