@@ -1,0 +1,79 @@
+# First, create a CSV file with the following structure:
+# SiteTitle,SiteURL,SiteOwner,Template,TimeZone,StorageQuota,ResourceQuota
+#
+# Sample CSV content:
+# "Smith v Jones","smith-jones","big.permis.group@domain.com","GROUP#0","11","500","0"
+# "Davis v Miller","davis-miller","big.permis.group@domain.com","GROUP#0","11","500","0"
+
+# Install required modules if not already present
+Install-Module -Name PnP.PowerShell -Force
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Force
+
+# Connect to SharePoint Online Admin Center
+Connect-SPOService -Url "https://yourtenant-admin.sharepoint.com"
+
+# Connect to PnP Online
+$adminSiteUrl = "https://yourtenant-admin.sharepoint.com"
+Connect-PnPOnline -Url $adminSiteUrl -Interactive
+
+# Import CSV file
+$sites = Import-Csv -Path ".\sites.csv"
+
+# Hub site URL - update this to your hub site URL
+$hubSiteUrl = "https://yourtenant.sharepoint.com/sites/CaseManagementHub"
+
+foreach ($site in $sites) {
+    try {
+        Write-Host "Creating site: $($site.SiteTitle)" -ForegroundColor Yellow
+        
+        # Create new site
+        New-PnPSite -Type TeamSite `
+            -Title $site.SiteTitle `
+            -Url $site.SiteURL `
+            -Owner $site.SiteOwner `
+            -Template $site.Template `
+            -TimeZone $site.TimeZone `
+            -StorageQuota $site.StorageQuota `
+            -Wait
+
+        # Wait for site creation to complete
+        Start-Sleep -Seconds 30
+
+        # Connect to newly created site
+        $newSiteUrl = "https://yourtenant.sharepoint.com/sites/$($site.SiteURL)"
+        Connect-PnPOnline -Url $newSiteUrl -Interactive
+
+        # Enable custom scripts
+        Set-PnPSite -DenyAddAndCustomizePages $false
+
+        # Enable managed metadata
+        $web = Get-PnPWeb
+        $web.ManagedMetadataServiceApplicationProxy.IsServiceEnabled = $true
+        $web.Update()
+        Invoke-PnPQuery
+
+        # Associate with hub site
+        Add-PnPHubSiteAssociation -Site $newSiteUrl -HubSite $hubSiteUrl
+
+        # Add site collection admins
+        Add-PnPSiteCollectionAdmin -Owners "big.permis.group@domain.com"
+
+        # Enable content types
+        $ctx = Get-PnPContext
+        $site = $ctx.Site
+        $site.RootWeb.ContentTypesEnabled = $true
+        $site.RootWeb.Update()
+        $ctx.ExecuteQuery()
+
+        Write-Host "Successfully created and configured site: $($site.SiteTitle)" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error creating site $($site.SiteTitle): $($_.Exception.Message)" -ForegroundColor Red
+        # Log error to file
+        $_.Exception.Message | Out-File -Append -FilePath ".\error_log.txt"
+    }
+}
+
+# Disconnect from services
+Disconnect-PnPOnline
+Disconnect-SPOService
