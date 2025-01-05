@@ -31,7 +31,8 @@ try {
                 -Title $site.SiteTitle `
                 -Alias $site.SiteURL `
                 -Owners $site.SiteOwner `
-                -Template "STS#3" `
+                -Template "GROUP#0"
+                -Template "GROUP#0" `
                 -TimeZone $site.TimeZone `
                 -StorageQuota ([int]$site.StorageQuota * 1MB) `
                 -Wait
