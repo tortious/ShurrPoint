@@ -1,0 +1,109 @@
+# CSV Structure remains the same:
+# SiteTitle,SiteURL,SiteOwner,Template,TimeZone,StorageQuota,ResourceQuota
+#
+# Sample CSV content:
+# "Smith v Jones","smith-jones","big.permis.group@domain.com","GROUP#0","11","500","0"
+# "Davis v Miller","davis-miller","big.permis.group@domain.com","GROUP#0","11","500","0"
+
+# Ensure you have 2.99 nightly installed
+# Uninstall-Module PnP.PowerShell -AllVersions
+# Install-Module PnP.PowerShell -RequiredVersion 2.99.0-nightly
+
+# Import required modules
+Import-Module PnP.PowerShell
+
+try {
+    # Connect to SharePoint Admin Center
+    Connect-PnPOnline -Url "https://yourtenant-admin.sharepoint.com" -Interactive
+    
+    # Import CSV file
+    $sites = Import-Csv -Path ".\sites.csv"
+    
+    # Hub site URL - update this to your hub site URL
+    $hubSiteUrl = "https://yourtenant.sharepoint.com/sites/CaseManagementHub"
+    
+    foreach ($site in $sites) {
+        try {
+            Write-Host "Creating site: $($site.SiteTitle)" -ForegroundColor Yellow
+            
+            # Create new site using modern cmdlet
+            $newSite = New-PnPSite -Type TeamSite `
+                -Title $site.SiteTitle `
+                -Alias $site.SiteURL `
+                -Owners $site.SiteOwner `
+                -Template "STS#3" `
+                -TimeZone $site.TimeZone `
+                -StorageQuota ([int]$site.StorageQuota * 1MB) `
+                -Wait
+            
+            # Wait for site provisioning
+            Start-Sleep -Seconds 30
+            
+            # Get the new site URL
+            $newSiteUrl = $newSite.Url
+            
+            # Connect to newly created site
+            Connect-PnPOnline -Url $newSiteUrl -Interactive
+            
+            # Enable custom scripts (modern method)
+            Set-PnPTenantSite -Url $newSiteUrl -DenyAddAndCustomizePages $false -NoScriptSite $false
+            
+            # Enable managed metadata (modern method)
+            $context = Get-PnPContext
+            $web = Get-PnPWeb
+            $web.ManagedMetadataServiceAppProxy.IsServiceEnabled = $true
+            $web.Update()
+            $context.ExecuteQuery()
+            
+            # Associate with hub site (modern method)
+            Add-PnPHubSiteAssociation -Site $newSiteUrl -HubSite $hubSiteUrl
+            
+            # Add site collection admins (modern method)
+            Grant-PnPSiteCollectionAdmin -Owners "big.permis.group@domain.com"
+            
+            # Enable content types (modern method)
+            $site = Get-PnPSite
+            $rootWeb = $site.RootWeb
+            $rootWeb.ContentTypesEnabled = $true
+            $rootWeb.Update()
+            $context.ExecuteQuery()
+            
+            Write-Host "Successfully created and configured site: $($site.SiteTitle)" -ForegroundColor Green
+            
+            # Disconnect from the site before moving to next
+            Disconnect-PnPOnline
+            
+            # Reconnect to admin center for next iteration
+            Connect-PnPOnline -Url "https://yourtenant-admin.sharepoint.com" -Interactive
+        }
+        catch {
+            Write-Host "Error creating site $($site.SiteTitle): $($_.Exception.Message)" -ForegroundColor Red
+            $errorDetails = @{
+                SiteTitle = $site.SiteTitle
+                Error = $_.Exception.Message
+                DateTime = (Get-Date).ToString()
+            }
+            $errorDetails | ConvertTo-Json | Out-File -Append -FilePath ".\error_log.json"
+            
+            # Ensure we're connected to admin center for next iteration
+            Connect-PnPOnline -Url "https://yourtenant-admin.sharepoint.com" -Interactive
+            continue
+        }
+    }
+}
+catch {
+    Write-Host "Critical error: $($_.Exception.Message)" -ForegroundColor Red
+    $_.Exception.Message | Out-File -Append -FilePath ".\critical_error_log.txt"
+}
+finally {
+    # Always disconnect at the end
+    if (Get-PnPConnection) {
+        Disconnect-PnPOnline
+    }
+}
+
+# Additional modern features available in 2.99:
+# - Get-PnPHubSite: To verify hub site association
+# - Get-PnPSiteScriptFromWeb: To capture site configurations
+# - Register-PnPSiteDesign: To create reusable designs
+# - Get-PnPTenantSite -Identity $newSiteUrl -Detailed: For detailed site information
