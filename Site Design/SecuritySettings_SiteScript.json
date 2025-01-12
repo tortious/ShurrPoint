@@ -1,0 +1,37 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "setGroup",
+      "groupName": "{groupsitetitle} Owners",
+      "description": "Site Owners Group",
+      "allowMembersEditMembership": false,
+      "allowRequestToJoinLeave": false
+    },
+    {
+      "verb": "setGroup",
+      "groupName": "{groupsitetitle} Members",
+      "description": "Site Members Group",
+      "allowMembersEditMembership": false,
+      "allowRequestToJoinLeave": true
+    },
+    {
+      "verb": "setGroup",
+      "groupName": "{groupsitetitle} Visitors",
+      "description": "Site Visitors Group",
+      "allowMembersEditMembership": false,
+      "allowRequestToJoinLeave": false
+    },
+    {
+      "verb": "addPrincipalToGroup",
+      "principal": "c:0o.c|federateddirectoryclaimprovider|58da12bb-d33c-470d-bde4-df444decdd7b_o",
+      "group": "{groupsitetitle} Owners"
+    },
+    {
+      "verb": "addPrincipalToGroup",
+      "principal": "c:0-.f|rolemanager|spo-grid-all-users/b284d59a-77f3-4441-84b3-708c6af60156",
+      "group": "{groupsitetitle} Members"
+    }
+  ],
+  "version": 1
+}
