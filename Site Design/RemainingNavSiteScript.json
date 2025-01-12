@@ -1,0 +1,21 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "addNavLink",
+      "displayName": "Judge Details",
+      "url": "{site}/SitePages/JudgeDetails.aspx"
+    },
+    {
+      "verb": "addNavLink",
+      "displayName": "Accident Details",
+      "url": "{site}/SitePages/AccidentDetails.aspx"
+    },
+    {
+      "verb": "addNavLink",
+      "displayName": "Witnesses",
+      "url": "{site}/SitePages/Witnesses.aspx"
+    }
+  ],
+  "version": 1
+}
