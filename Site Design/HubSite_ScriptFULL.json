@@ -1,0 +1,21 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "joinHubSite",
+      "hubSiteId": "{hosturl}/sites/Cases"
+    }
+  ],
+  "version": 1
+}
+
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "applyTheme",
+      "themeName": "seattle.master"
+    }
+  ],
+  "version": 1
+}
