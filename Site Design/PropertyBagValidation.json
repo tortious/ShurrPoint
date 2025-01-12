@@ -1,0 +1,16 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "setPropertyBag",
+      "key": "fontpackageid",
+      "value": "tenant|5ae83599-77c0-440a-82c1-af40be0bba5a"
+    },
+    {
+      "verb": "setPropertyBag",
+      "key": "referredects",
+      "value": "0x0120D520000F2A337FC46CE54491819663DE6B853A|..."
+    }
+  ],
+  "version": 1
+}
