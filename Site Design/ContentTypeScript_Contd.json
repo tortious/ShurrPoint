@@ -1,0 +1,106 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Court #_0",
+      "internalName": "h16bd79301b14167a7fe61214ac3efb7",
+      "id": "{ed807ffa-4c8f-4443-8615-a34a5dcf3d16}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Text",
+      "displayName": "Status",
+      "internalName": "Status",
+      "id": "{D26B5F0C-27CF-46D0-984C-A0C2EA81CB10}",
+      "group": "Search Config"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Call To Action",
+      "internalName": "_SPCallToAction",
+      "id": "{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}",
+      "group": "_Hidden"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Prior Conditions",
+      "internalName": "Prior_x0020_Conditions",
+      "id": "{4d3b6a1e-d10e-44a0-9de5-c9fd5906c03c}",
+      "group": "Medical Record"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Text",
+      "displayName": "FilingDate",
+      "internalName": "FilingDate",
+      "id": "{3aa3ab23-eeb9-4c9d-b088-8930ea0965e8}",
+      "group": "CaseDocuments"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "TaxonomyFieldType",
+      "displayName": "Client",
+      "internalName": "Client",
+      "id": "{3c733f24-6914-4b76-b436-3b3d886fc164}",
+      "group": "Core Contact and Calendar Columns",
+      "properties": {
+        "SspId": "{sitecollectiontermstoreid}",
+        "TermSetId": "{termsetid:People:External People}"
+      }
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Accident Details",
+      "internalName": "Accident_x0020_Details",
+      "id": "{0b90f352-f141-4658-b671-5c16aba11de6}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "TaxonomyFieldTypeMulti",
+      "displayName": "HashTags",
+      "internalName": "HashTags",
+      "id": "{333b1bc2-0532-4872-96f1-bbbdead35a56}",
+      "group": "Custom Columns",
+      "properties": {
+        "SspId": "{sitecollectiontermstoreid}",
+        "TermSetId": "{termsetid:System:Hashtags}"
+      }
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "TaxonomyFieldTypeMulti",
+      "displayName": "Motion Type",
+      "internalName": "Motion_x0020_Type",
+      "id": "{35b0b5f1-4367-4c5b-a57c-b1527b038b0c}",
+      "group": "Motions",
+      "properties": {
+        "SspId": "{sitecollectiontermstoreid}",
+        "TermSetId": "{termsetid:Case Management:DocTypes}"
+      }
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Text",
+      "displayName": "Filing Party",
+      "internalName": "Filing_x0020_Party",
+      "id": "{d42cc9f4-8d66-40fa-9649-f255b769e556}",
+      "group": "Motions"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Text",
+      "displayName": "Judge",
+      "internalName": "Judge",
+      "id": "{16b537b0-c6cb-47ef-90bf-8aa251092f71}",
+      "group": "Mordini"
+    }
+  ],
+  "version": 1
+}
