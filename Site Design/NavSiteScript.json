@@ -1,0 +1,61 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "addNavLink",
+      "displayName": "Home",
+      "url": "{site}",
+      "children": [
+        {
+          "verb": "addNavLink",
+          "displayName": "Site contents",
+          "url": "{site}/_layouts/15/viewlsts.aspx",
+          "isExternal": true
+        },
+        {
+          "verb": "addNavLink",
+          "displayName": "Pages",
+          "url": "{site}/SitePages/Forms/ByAuthor.aspx"
+        }
+      ]
+    },
+    {
+      "verb": "addNavLink",
+      "displayName": "Libraries",
+      "url": "",
+      "children": [
+        {
+          "verb": "addNavLink",
+          "displayName": "CaseMedia",
+          "url": "{site}/CaseMedia/Forms/All media.aspx"
+        },
+        {
+          "verb": "addNavLink",
+          "displayName": "AssignmentDocuments",
+          "url": "{site}/AssignmentDocuments/Forms/AllItems.aspx"
+        },
+        {
+          "verb": "addNavLink",
+          "displayName": "Correspondence",
+          "url": "{site}/Correspondence/Forms/Main.aspx"
+        },
+        {
+          "verb": "addNavLink",
+          "displayName": "Discovery",
+          "url": "{site}/Discovery/Forms/AllItems.aspx"
+        },
+        {
+          "verb": "addNavLink",
+          "displayName": "CasePleadings",
+          "url": "{site}/CasePleadings/Forms/MainView.aspx"
+        }
+      ]
+    },
+    {
+      "verb": "addNavLink",
+      "displayName": "Answers/AffirmDefenses",
+      "url": "{site}/SitePages/Answers-Affirmative-Defenses.aspx?csf=1&web=1"
+    }
+  ],
+  "version": 1
+}
