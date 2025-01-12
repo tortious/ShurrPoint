@@ -1,0 +1,46 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Motion Type_0",
+      "internalName": "j5b0b5f143674c5ba57cb1527b038b0c",
+      "id": "{cf1391c6-cd07-4f88-85ff-58ed6361adb6}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Claim #_0",
+      "internalName": "f903e1d6fcd84c4980aa1d3ae9e5e973",
+      "id": "{ae3a01e4-337f-43ad-9e7b-b25192f97375}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "Document-Type_0",
+      "internalName": "nfe58dd11fd54e24bbf3ac5db68636ab",
+      "id": "{dd934f58-d4d5-4fd3-9dec-2e2f60818f7b}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Note",
+      "displayName": "HashTags_0",
+      "internalName": "j33b1bc20532487296f1bbbdead35a56",
+      "id": "{790722e8-f13c-4f84-90b2-36161bfe7873}",
+      "group": "Custom Columns"
+    },
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Choice",
+      "displayName": "Scope",
+      "internalName": "Scope",
+      "id": "{F2630201-2B18-4F74-867B-18551759B437}",
+      "choices": ["Tenant", "SPSite", "SPWeb"]
+    }
+  ],
+  "version": 1
+}
