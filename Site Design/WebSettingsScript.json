@@ -1,0 +1,59 @@
+{
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "setSiteLogo",
+      "url": "/teams/terrytemplate/_api/groupservice/getgroupimage?id='0899001e-33ca-4236-b1a7-5e252dfbb505'"
+    },
+    {
+      "verb": "setHomePage",
+      "url": "SitePages/CollabHome.aspx"
+    },
+    {
+      "verb": "setRegionalSettings",
+      "timeZone": 11,
+      "locale": 1033,
+      "sortOrder": 25,
+      "adjustHijriDays": 0,
+      "alternateCalendarType": "None",
+      "calendarType": "Gregorian",
+      "firstDayOfWeek": "Sunday",
+      "firstWeekOfYear": 0,
+      "showWeeks": false,
+      "time24": false,
+      "workDayEndHour": "5:00PM",
+      "workDayStartHour": "8:00AM",
+      "workDays": "62"
+    },
+    {
+      "verb": "setPropertyBag",
+      "key": "ThemePrimary",
+      "value": "#1FD0F0"
+    },
+    {
+      "verb": "setPropertyBag",
+      "key": "SiteNotebookGuid",
+      "value": "42e79dce-466c-47d3-b0ec-c60908d82de6"
+    },
+    {
+      "verb": "setPropertyBag",
+      "key": "BackgroundImageUrl",
+      "value": "/teams/TerryTemplate/SiteAssets/__extendedHeaderBackgroundImage____extendedHeaderBackgroundImage__interior_walls_lights_138370_1920x1200.jpg"
+    },
+    {
+      "verb": "setPropertyBag",
+      "key": "UseFastCloneFromSiteMaster",
+      "value": "TRUE"
+    },
+    {
+      "verb": "setQuickLaunch",
+      "enable": true
+    },
+    {
+      "verb": "setSearchSettings",
+      "scope": "DefaultScope",
+      "boxInNavBar": "Inherit"
+    }
+  ],
+  "version": 1
+}
