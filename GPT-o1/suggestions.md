@@ -5,11 +5,11 @@ Case Management Content Types
 
 ### Case File: Essential columns include:
 
-Case # (Managed Metadata)
+**Case # (Managed Metadata)
 Client Name
 Opposing Counsel
 Date Opened
-
+**
 
 Claim: Primary columns include:
 
