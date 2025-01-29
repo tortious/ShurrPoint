@@ -1,0 +1,161 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+  "actions": [
+    {
+      "verb": "createLibrary",
+      "displayName": "CaseMedia",
+      "internalName": "CaseMedia",
+      "templateType": 101, 
+      "fields": [
+        {
+          "displayName": "Media Type",
+          "internalName": "MediaType",
+          "type": "Choice",
+          "choices": ["Image", "Video", "Audio", "Other"],
+          "required": false
+        },
+        {
+          "displayName": "Case ID",
+          "internalName": "CaseID",
+          "type": "Text",
+          "maxLength": 255,
+          "required": true
+        }
+      ],
+      "views": [
+        {
+          "name": "All Media",
+          "columns": ["DocIcon", "LinkFilename", "MediaType", "CaseID"],
+          "query": "<OrderBy><FieldRef Name='MediaType' /></OrderBy>",
+          "rowLimit": 30,
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "verb": "createLibrary",
+      "displayName": "AssignmentDocuments",
+      "internalName": "AssignmentDocuments",
+      "templateType": 101, 
+      "fields": [
+        {
+          "displayName": "Assignment Type",
+          "internalName": "AssignmentType",
+          "type": "Choice",
+          "choices": ["Initial", "Follow-up", "Final"],
+          "required": true
+        },
+        {
+          "displayName": "Due Date",
+          "internalName": "DueDate",
+          "type": "DateTime",
+          "format": "DateOnly",
+          "required": false
+        }
+      ],
+      "views": [
+        {
+          "name": "All Assignments",
+          "columns": ["DocIcon", "LinkFilename", "AssignmentType", "DueDate"],
+          "query": "<OrderBy><FieldRef Name='DueDate' /></OrderBy>",
+          "rowLimit": 30,
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "verb": "createLibrary",
+      "displayName": "Correspondence",
+      "internalName": "Correspondence",
+      "templateType": 101, 
+      "fields": [
+        {
+          "displayName": "Correspondence Type",
+          "internalName": "CorrespondenceType",
+          "type": "Choice",
+          "choices": ["Letter", "Email", "Memo"],
+          "required": false
+        },
+        {
+          "displayName": "Date Sent",
+          "internalName": "DateSent",
+          "type": "DateTime",
+          "format": "DateOnly",
+          "required": false
+        }
+      ],
+      "views": [
+        {
+          "name": "Main",
+          "columns": ["DocIcon", "LinkFilename", "CorrespondenceType", "DateSent"],
+          "query": "<OrderBy><FieldRef Name='DateSent' Ascending='FALSE' /></OrderBy>",
+          "rowLimit": 30,
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "verb": "createLibrary",
+      "displayName": "Discovery",
+      "internalName": "Discovery",
+      "templateType": 101, 
+      "fields": [
+        {
+          "displayName": "Discovery Type",
+          "internalName": "DiscoveryType",
+          "type": "Choice",
+          "choices": ["Interrogatory", "Request for Production", "Admission"],
+          "required": true
+        },
+        {
+          "displayName": "Related Case",
+          "internalName": "RelatedCase",
+          "type": "Text",
+          "maxLength": 255,
+          "required": false
+        }
+      ],
+      "views": [
+        {
+          "name": "All Items",
+          "columns": ["DocIcon", "LinkFilename", "DiscoveryType", "RelatedCase"],
+          "query": "<OrderBy><FieldRef Name='DiscoveryType' /></OrderBy>",
+          "rowLimit": 30,
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "verb": "createLibrary",
+      "displayName": "CasePleadings",
+      "internalName": "CasePleadings",
+      "templateType": 101, 
+      "fields": [
+        {
+          "displayName": "Pleading Type",
+          "internalName": "PleadingType",
+          "type": "Choice",
+          "choices": ["Complaint", "Answer", "Motion"],
+          "required": true
+        },
+        {
+          "displayName": "Filing Date",
+          "internalName": "FilingDate",
+          "type": "DateTime",
+          "format": "DateOnly",
+          "required": false
+        }
+      ],
+      "views": [
+        {
+          "name": "MainView",
+          "columns": ["DocIcon", "LinkFilename", "PleadingType", "FilingDate"],
+          "query": "<OrderBy><FieldRef Name='FilingDate' Ascending='FALSE' /></OrderBy>",
+          "rowLimit": 30,
+          "isDefault": true
+        }
+      ]
+    }
+  ],
+  "version": 1
+}
