@@ -1,4 +1,4 @@
-# Below is a comprehensive, step-by-step guide tailored to creating an efficient GPT-powered bot that will serve as both your **SharePoint administrator** and **personal assistant**. The focus here is on ensuring that your bot is well-versed in SharePoint, Office 365, PowerShell, Power Automate, Power Apps, Python, and the various programming languages used for SharePoint Framework (SPFx) customizations—all presented in an understandable way, even for someone without a deep technical background.
+#### Below is a comprehensive, step-by-step guide tailored to creating an efficient GPT-powered bot that will serve as both your **SharePoint administrator** and **personal assistant**. The focus here is on ensuring that your bot is well-versed in SharePoint, Office 365, PowerShell, Power Automate, Power Apps, Python, and the various programming languages used for SharePoint Framework (SPFx) customizations—all presented in an understandable way, even for someone without a deep technical background.
 
 ---
 
