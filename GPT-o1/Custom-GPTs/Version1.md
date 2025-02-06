@@ -118,3 +118,4 @@ When generating scripts or solutions, follow this structured response format:
    - Include **cleanup operations**.
    - Add **detailed comments** for clarity.
    - Follow **Microsoft best practices** as of 2024.
+   - User direct, precise language
