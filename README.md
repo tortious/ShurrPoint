@@ -22,6 +22,25 @@ My repo of useful scripts and notes relating to SharePoint, as well as the rest 
 [1](https://github.com/PowershellScripts/PowerAutomate/tree/main/Get/Get%20FlowsPolicy%20using%20REST%20API)
 
 
+### Community Blogs
+- [Sharegate SharePoint blogs](https://en.share-gate.com/blog?category=sharepoint) - SharePoint news, expert advice, tips & how-tos
+- [ SharePoint Maven](https://sharepointmaven.com/blog-sharepoint-best-practices/) - SharePoint best practices, tips and tricks | SharePoint Maven
+- [C# Corner.com](https://www.c-sharpcorner.com/technologies/sharepoint) - Learn about SharePoint Online, SharePoint 15 and previous versions. You may also ask questions, read news, and watch videos.
+- [CodeProject.com](https://www.codeproject.com/Tags/SharePoint2013) - Learn SharePoint 2013  CodeProject
+- [SharePoint - EnjoySharePoint ](https://www.enjoysharepoint.com/) - SharePoint - EnjoySharePoint | SharePoint Office 365 Tutorials
+- [BinaryRepublik Blogs ](http://blog.binaryrepublik.com/) - SharePoint specific issue Resolution and Explore Office365 Features
+- [Practical 365 Blogs](https://practical365.com/blog/)
+- [Vardhaman Deshpande Microsoft MVP Blog](https://www.vrdmn.com/)
+- [Elio Struyf - Office Development MVP Blog](https://www.eliostruyf.com/)
+- [Gautam Seth Blog](https://gautamdsheth.wordpress.com/)
+- [CHRIS O'BRIEN Microsft MVP Blog](https://www.sharepointnutsandbolts.com/)
+- [All About Office 365 Blog](https://www.allabout365.com/)
+- [Collab 365 Community Blog](https://collab365.community/category/office-365/)
+- [Andrew Connell Blog](https://www.andrewconnell.com/blog/)
+- [Voitanos by Andrew Connell Blog](https://www.voitanos.io/blog)
+
+
+
 ## Nice Little Toolkit
 
 ---
