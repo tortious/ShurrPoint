@@ -1,0 +1,38 @@
+<prompt>
+    <request>
+        <context>
+            <description>
+                Please outline a detailed guide for setting up a SharePoint site covering the following topics:
+                - Consistent Branding and Theme
+                - Document Libraries for Case Management
+                - Basic Permissions Setup for the Team
+                - Navigation Links to Hub Sites
+                - Custom Columns for Metadata
+                - Automated Case Status Tracking
+                - Standard Web Parts
+                For each section, include in-depth explanations, practical examples, and, where appropriate, illustrations or visual aids.
+                Additionally, offer best practices, tips for implementation, and potential troubleshooting solutions.
+            </description>
+            <examples>
+                <section>
+                    <title>Consistent Branding and Theme</title>
+                    <details>
+                        Explain how to create and apply a custom theme, set a logo, and configure navigation layout across the tenant.
+                    </details>
+                </section>
+                <section>
+                    <title>Document Libraries for Case Management</title>
+                    <details>
+                        Include steps for creating libraries, adding custom metadata columns, and managing retention policies.
+                    </details>
+                </section>
+                <section>
+                    <title>Automated Case Status Tracking</title>
+                    <details>
+                        Provide a step-by-step workflow using Power Automate for tracking case progress and sending notifications.
+                    </details>
+                </section>
+            </examples>
+        </context>
+    </request>
+</prompt>
