@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <!-- Preferences for the provisioning template -->
+  <pnp:Preferences Generator="PnP.Framework, Version=1.17.15.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  
+  <!-- Container for provisioning templates -->
+  <pnp:Templates ID="CONTAINER-TEMPLATE-C6374499F90C419FB82C12F806879E40">
+    
+    <!-- Definition of a single provisioning template -->
+    <pnp:ProvisioningTemplate ID="TEMPLATE-C6374499F90C419FB82C12F806879E40" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      
+      <!-- Web settings such as access email, crawl settings, welcome page, and site logo -->
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/CollabHome.aspx" SiteLogo="/sites/mattertemplate/_api/groupservice/getgroupimage?id='a964caa7-005b-4816-8c03-c15fbfd[...]"/>
+      
+      <!-- Site settings such as allowing designer, search box, and search center URL -->
+      <pnp:SiteSettings AllowDesigner="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
+      
+      <!-- Regional settings for the site -->
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time2[...]
+      
+      <!-- Property bag entries for custom site properties -->
+      <pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry Key="docid_customProvider_class" Value="Microsoft.Office.DocumentManagement.Internal.OobProvider" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_enabled" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="RelatedHubSiteIds" Value="[&quot;064616e2-3fcc-4bc1-bcec-88b6dfd28ba6&quot;,&quot;d06b9ee4-7122-4938-852d-18db264c1bec&quot;]" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_diwi_ls" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="SaveSiteAsTemplateEnabled" Value="false" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="allowrevertfromtemplate" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="allowmasterpageediting" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="RectSiteLogoUrl" Value="/sites/MatterTemplate/SiteAssets/__rectSitelogo__files.png" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="ThemePrimary" Value="#00B294" Overwrite="false" Indexed="true" />
+        <pnp:PropertyBagEntry Key="docid_diwi_lf" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_msft_hier_listidx" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;DictionarySerializer&gt;&#xD;&#xA;  &lt;dictionary&gt;[...]
+        <pnp:PropertyBagEntry Key="allowdesigner" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="showurlstructure" Value="1" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="SiteNotebookGuid" Value="ce08f2de-65a9-4d66-a02b-4def080e92a8" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_customProvider_assembly" Value="Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_msft_hier_listcnt" Value="500432908" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="helplibraryurl" Value="Lists/Site Collection Help" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_docctupdated" Value="True" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_msft_hier_siteprefix" Value="DPDEQDYKEPSX" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="CanSyncHubSitePermissions" Value="TRUE" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="UseFastCloneFromSiteMaster" Value="TRUE" Overwrite="false" />
+        <pnp:PropertyBagEntry Key="docid_settings_ui" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;DocIdUiSettings xmlns:xsd=&quot;http://www.w3.org/2001/XMLSc[...]
+        <pnp:PropertyBagEntry Key="docid_docsetctupdated" Value="True" Overwrite="false" />
+      </pnp:PropertyBagEntries>
+      
+      <!-- Security settings defining groups and permissions -->
+      <pnp:Security AssociatedOwnerGroup="{groupsitetitle} Owners" AssociatedMemberGroup="{groupsitetitle} Members" AssociatedVisitorGroup="{groupsitetitle} Visitors">
+        <pnp:AdditionalAdministrators>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|27ccda0e-6468-4893-9f60-01f535bf6445_o" />
+        </pnp:AdditionalAdministrators>
+        <pnp:AdditionalOwners>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|27ccda0e-6468-4893-9f60-01f535bf6445_o" />
+        </pnp:AdditionalOwners>
+        <pnp:AdditionalMembers>
+          <pnp:User Name="c:0o.c|federateddirectoryclaimprovider|27ccda0e-6468-4893-9f60-01f535bf6445" />
+        </pnp:AdditionalMembers>
+        <pnp:Permissions>
+          <pnp:RoleDefinitions>
+            <pnp:RoleDefinition Name="Approve" Description="Can edit and approve pages, list items, and documents.">
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>AddListItems</pnp:Permission>
+                <pnp:Permission>EditListItems</pnp:Permission>
+                <pnp:Permission>DeleteListItems</pnp:Permission>
+                <pnp:Permission>ApproveItems</pnp:Permission>
+                <pnp:Permission>OpenItems</pnp:Permission>
+                <pnp:Permission>ViewVersions</pnp:Permission>
+                <pnp:Permission>DeleteVersions</pnp:Permission>
+                <pnp:Permission>CancelCheckout</pnp:Permission>
+                <pnp:Permission>ManagePersonalViews</pnp:Permission>
+                <pnp:Permission>ViewFormPages</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+                <pnp:Permission>CreateSSCSite</pnp:Permission>
+                <pnp:Permission>BrowseDirectories</pnp:Permission>
+                <pnp:Permission>BrowseUserInfo</pnp:Permission>
+                <pnp:Permission>AddDelPrivateWebParts</pnp:Permission>
+                <pnp:Permission>UpdatePersonalWebParts</pnp:Permission>
+                <pnp:Permission>UseClientIntegration</pnp:Permission>
+                <pnp:Permission>UseRemoteAPIs</pnp:Permission>
+                <pnp:Permission>CreateAlerts</pnp:Permission>
+                <pnp:Permission>EditMyUserInfo</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+            <pnp:RoleDefinition Name="Manage Hierarchy" Description="Can create sites and edit pages, list items, and documents.">
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>AddListItems</pnp:Permission>
+                <pnp:Permission>EditListItems</pnp:Permission>
+                <pnp:Permission>DeleteListItems</pnp:Permission>
+                <pnp:Permission>OpenItems</pnp:Permission>
+                <pnp:Permission>ViewVersions</pnp:Permission>
+                <pnp:Permission>DeleteVersions</pnp:Permission>
+                <pnp:Permission>CancelCheckout</pnp:Permission>
+                <pnp:Permission>ManagePersonalViews</pnp:Permission>
+                <pnp:Permission>ManageLists</pnp:Permission>
+                <pnp:Permission>ViewFormPages</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+                <pnp:Permission>AddAndCustomizePages</pnp:Permission>
+                <pnp:Permission>ViewUsageData</pnp:Permission>
+                <pnp:Permission>CreateSSCSite</pnp:Permission>
+                <pnp:Permission>ManageSubwebs</pnp:Permission>
+                <pnp:Permission>ManagePermissions</pnp:Permission>
+                <pnp:Permission>BrowseDirectories</pnp:Permission>
+                <pnp:Permission>BrowseUserInfo</pnp:Permission>
+                <pnp:Permission>AddDelPrivateWebParts</pnp:Permission>
+                <pnp:Permission>UpdatePersonalWebParts</pnp:Permission>
+                <pnp:Permission>ManageWeb</pnp:Permission>
+                <pnp:Permission>UseClientIntegration</pnp:Permission>
+                <pnp:Permission>UseRemoteAPIs</pnp:Permission>
+                <pnp:Permission>ManageAlerts</pnp:Permission>
+                <pnp:Permission>CreateAlerts</pnp:Permission>
+                <pnp:Permission>EditMyUserInfo</pnp:Permission>
+                <pnp:Permission>EnumeratePermissions</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+            <pnp:RoleDefinition Name="Restricted Read" Description="Can view pages and documents, but cannot view historical versions or user permissions.">
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>OpenItems</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+            <pnp:RoleDefinition Name="View Only" Description="Can view pages, list items, and documents. Document types with server-side file handlers can be viewed in the browser but not downloaded."[...]
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>ViewListItems</pnp:Permission>
+                <pnp:Permission>ViewVersions</pnp:Permission>
+                <pnp:Permission>ViewFormPages</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>ViewPages</pnp:Permission>
+                <pnp:Permission>CreateSSCSite</pnp:Permission>
+                <pnp:Permission>BrowseUserInfo</pnp:Permission>
+                <pnp:Permission>UseClientIntegration</pnp:Permission>
+                <pnp:Permission>UseRemoteAPIs</pnp:Permission>
+                <pnp:Permission>CreateAlerts</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+            <pnp:RoleDefinition Name="Restricted Interfaces for Translation" Description="Can open lists and folders, and use remote interfaces.">
+              <pnp:Permissions>
+                <pnp:Permission>EmptyMask</pnp:Permission>
+                <pnp:Permission>Open</pnp:Permission>
+                <pnp:Permission>UseRemoteAPIs</pnp:Permission>
+              </pnp:Permissions>
+            </pnp:RoleDefinition>
+          </pnp:RoleDefinitions>
+        </pnp:Permissions>
+      </pnp:Security>
+      
+      <!-- Navigation settings for global and current navigation -->
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="false" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="false">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+            <pnp:NavigationNode Title="Conversations" Url="{site}/_layouts/15/groupstatus.aspx?Target=CONVERSATIONS&amp;Source=QuickLaunch" IsExternal="true" />
+            <pnp:NavigationNode Title="Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Notebook" Url="{site}/_layouts/15/Doc.aspx?sourcedoc={ce08f2de-65a9-4d66-a02b-4def080e92a8}&amp;action=editnew" IsExternal="true" />
+            <pnp:NavigationNode Title="Pages" Url="{site}/SitePages/Forms/ByAuthor.aspx" />
+            <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
+            <pnp:NavigationNode Title="Pleadings" Url="{site}/Pleadings/Forms/AllItems.aspx" />
+            <pnp:NavigationNode Title="Recent" Url="" IsExternal="true" />
+            <pnp:NavigationNode Title="Schedule" Url="{site}/Lists/Schedule/AllItems.aspx" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+      
+      <!-- Definitions of site fields -->
+      <pnp:SiteFields>
+        <Field Type="Note" DisplayName="HashTags_0" StaticName="j33b1bc20532487296f1bbbdead35a56" Name="j33b1bc20532487296f1bbbdead35a56" ID="{790722e8-f13c-4f84-90b2-36161bfe7873}" ShowInViewForms="F[...]
+        <Field Type="Note" DisplayName="Wiki Categories_0" StaticName="e1a5b98cdd71426dacb6e478c7a5882f" Name="e1a5b98cdd71426dacb6e478c7a5882f" ID="{f863c21f-5fdb-4a91-bb0c-5ae889190dd7}" ShowInViewF[...]
+        <Field ID="{56747800-D36E-4625-ABE3-B1BC74A7D5F8}" Name="LowerValuesAreBetter" StaticName="LowerValuesAreBetter" Description="Whether lower is better or higher is better" Group="Status Indicat[...]
+        <Field ID="{672D9500-5649-49ae-8166-777F40527874}" Name="AbuseReportsCommentsLookup" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplaceOnUpgrade="TRUE" Group="_Hidden" Type="Lookup[...]
+          <FieldRefs>
+            <FieldRef Name="AbuseReportsLookup" />
+          </FieldRefs>
+        </Field>
+        <Field ID="{B5A4E101-ED09-42BB-B6AD-F1AC2D31A8B8}" Type="ChannelAliasFieldType" Name="ChannelAlias" StaticName="ChannelAlias" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidd[...]
+        <Field ID="{3de94b06-4120-41a5-b907-88773e493458}" Name="PublishingPageImage" StaticName="PublishingPageImage" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="Page Layout Columns"[...]
+        <Field ID="{851C7906-3C95-46bc-A81E-30588602D910}" Name="ReportLink" StaticName="ReportLink" Group="_Hidden" ReadOnly="TRUE" Type="Computed" DisplayName="Link to Report" Filterable="FALSE" Sor[...]
+          <FieldRefs>
+            <FieldRef Name="ReportName" />
+            <FieldRef Name="File_x0020_Type" />
+            <FieldRef Name="FileLeafRef" />
+            <FieldRef Name="_EditMenuTableStart" />
+            <FieldRef Name="_EditMenuTableEnd" />
+            <FieldRef Name="FSObjType" />
+          </FieldRefs>
+          <DisplayPattern>
+            <IfEqual>
+              <Expr1>
+                <Column Name="File_x0020_Type" />
+              </Expr1>
+              <Expr2>xlsx</Expr2>
+              <Then>
+                <HTML><![CDATA[<a ONCLICK="window.location=']]></HTML>
+                <HttpVDir />
+                <HTML><![CDATA[/_layouts/ExcelProfilePage.aspx?ListId=]]></HTML>
+                <List />
+                <HTML><![CDATA[&ID=]]></HTML>
+                <ID />
+                <HTML><![CDATA[';return false;" href="]]></HTML>
+                <Field Name="EncodedAbsUrl" />
+                <HTML><![CDATA[">]]></HTML>
+                <Field Name="
